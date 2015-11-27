@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	color: #999999;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	background-color: #6600ff;
+}
+
+#top {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	text-align: center;
+	padding: 100px 25% 100px 25%;
+}
+
+#top h2 {
+	background-color: white;
+	color: #3399ff;
+	font-size: 2em;
+}
+
+#intro {
+	display: flex;
+	flex-direction: column;
+	color: #999999;
+	padding: 50px 20% 50px 20%;
+	font-size: 20px;
+}
+
+#intro button {
+	color: #999999;
+	background-color: #000000;
+	height: 40px;
+	width: 40px;
+	margin: 5% auto;
+	border-radius: 2em;
+}
+
+#response {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: flex-start;
+	line-height: 30px;
+	padding-left: 20%;
+}
+
+#questions {
+	text-align: left;
+	font-size: 20px;
+}
+
+#feedback {
+	text-align: left;
+	font-size: 20px;
+}
+
+.correct {
+	color: #66ff33;
+}
+
+.incorrect {
+	color: red;
+}
