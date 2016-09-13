@@ -1,0 +1,110 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; }
+  html body, body body {
+    top: 0px; }
+
+.pageContent {
+  position: relative;
+  top: 20%;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 0 2% 0 2%; }
+  .pageContent h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family: "anders";
+    text-shadow: 4px 2px #59E7FF; }
+  .pageContent h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-family: "master-of-break"; }
+  .pageContent p {
+    font-family: "walkway"; }
+@font-face {
+  font-family: Anders;
+  src: url(fonts/Anders.ttf); }
+@font-face {
+  font-family: walkway;
+  src: url(fonts/walkway-Semibold.ttf); }
+@font-face {
+  font-family: master-of-break;
+  src: url(fonts/Master-of-Break.ttf); }
+.app-heading {
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .app-heading h1 {
+    font-family: 'Anders'; }
+  .app-heading .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .app-heading a {
+    width: 10%; }
+  .app-heading #Door:hover {
+    -webkit-animation: open 1s forwards;
+            animation: open 1s forwards; }
+
+@-webkit-keyframes open {
+  100% {
+    -webkit-transform: translate(30px);
+            transform: translate(30px);
+    opacity: 0; } }
+
+@keyframes open {
+  100% {
+    -webkit-transform: translate(30px);
+            transform: translate(30px);
+    opacity: 0; } }
+.app-nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin-top: 0; }
+
+.app-nav li {
+  margin: 0 30% 0 30%; }
+.appFooter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100%; }
+  .appFooter p {
+    font-family: 'walkway';
+    color: #B2B1A1;
+    font-size: 1.25em; }

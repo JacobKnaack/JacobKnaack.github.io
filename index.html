@@ -1,30 +1,16 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Who in the world is Jacob?</title>
-		<link rel="stylesheet" type="text/css" href="gameStyle.css">
-	</head>
-	<body>
-
-		<div id="top">
-			<h2>Welcome to my Guessing Game!</h2>
-		</div>
-
-		<div id="intro">
-			<p><strong>Hey, I'm Jacob!</strong> let's see how many questions about me you can guess correctly.  Just guess yes, or no!</p></br>
-			<p style="text-align: center;">Press the button below to play...</p>
-
-			<button onclick="quiz()">Play!</button> 
-		</div>
-
-		<div id="response">
-			<h3 id="questions"></h3>
-			<p id="feedback"></p>
-			<span class="correct"></span>
-			<span class="incorrect"></span>
-		</div>
-
-		<script src="javascript/game.js"></script>
-	</body>
-<html>
-
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolio">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jacob Knaack - Web Design</title>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="bundle.css">
+  </head>
+  <body>
+    <app-heading></app-heading>
+    <section ng-view class="pageContent"> </section>
+    <app-footer></app-footer>
+  </body>
+</html>
