@@ -9,8 +9,8 @@ html, body {
 .pageContent {
   position: relative;
   top: 20%;
-  width: 50%;
-  height: 50%;
+  max-width: 75vw;
+  max-height: 75vh;
   margin: 0 auto;
   padding: 0 2% 0 2%; }
   .pageContent h1 {
@@ -33,25 +33,41 @@ html, body {
 @font-face {
   font-family: master-of-break;
   src: url(fonts/Master-of-Break.ttf); }
-.app-heading {
-  position: fixed;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .app-heading h1 {
-    font-family: 'Anders'; }
-  .app-heading .icons {
+.appProject {
+  padding: 3em;
+  border-radius: 10px; }
+  .appProject .title {
+    font-family: anders; }
+  .appProject h3 {
+    font-family: walkway; }
+  .appProject .listSelect {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border-bottom: thin solid #59E7FF; }
+    .appProject .listSelect .titlePic {
+      max-width: 300px;
+      max-height: 100px;
+      width: auto;
+      height: auto;
+      margin: 0 auto 3vh auto;
+      border: thin solid #59E7FF;
+      border-radius: 50px; }
+      .appProject .listSelect .titlePic:hover {
+        border-color: #FF73B2; }
+      .appProject .listSelect .titlePic:active {
+        box-shadow: 10px 10px 5px #B2B1A1; }
+  .appProject .desc {
+    font-size: 1.2em;
+    line-height: 150%; }
+  .appProject .projectInfo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -62,8 +78,81 @@ html, body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-  .app-heading a {
-    width: 10%; }
+    .appProject .projectInfo .projectText {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      font-size: 1.5em;
+      margin: 2vh 3vw 2vh 3vw; }
+    .appProject .projectInfo .gallery {
+      padding: 10px;
+      margin-top: 2vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .appProject .projectInfo .gallery .screenshot {
+        max-width: 40vw;
+        max-height: 50vh;
+        width: auto;
+        height: auto;
+        margin: 3vh auto 3vh auto;
+        border: thin solid #59E7FF; }
+.app-heading {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .app-heading .entrance {
+    margin: 5vh auto 0 auto; }
+    .app-heading .entrance .enter {
+      margin: 0 auto;
+      width: 10em; }
+  .app-heading .logo img {
+    height: 7vh;
+    margin: 5vh auto 0 10vw;
+    border-bottom: solid thin #59E7FF; }
+    .app-heading .logo img:hover {
+      border: solid thin #CCBC33; }
+  .app-heading h1 {
+    font-family: 'Anders'; }
+  .app-heading .icons {
+    width: 60vw;
+    margin-left: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline; }
   .app-heading #Door:hover {
     -webkit-animation: open 1s forwards;
             animation: open 1s forwards; }
@@ -79,32 +168,43 @@ html, body {
     -webkit-transform: translate(30px);
             transform: translate(30px);
     opacity: 0; } }
-.app-nav ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0;
-  margin-top: 0; }
-
-.app-nav li {
-  margin: 0 30% 0 30%; }
+.app-nav {
+  margin: 5vh 5vw 0 auto; }
+  .app-nav .tabs {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+    margin: 0 auto; }
+  .app-nav li {
+    width: 10vw;
+    margin: 0 5% 0 5%;
+    text-align: center;
+    border-bottom: solid thin #B2B1A1; }
+    .app-nav li a {
+      text-decoration: none;
+      color: black;
+      font-family: Anders;
+      font-size: 2em; }
+    .app-nav li:hover {
+      border: thin solid #CCBC33; }
 .appFooter {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 40px;
-  margin: 0 auto;
+  margin: 0 auto 3vh auto;
   text-align: center;
   line-height: 100%; }
   .appFooter p {
     font-family: 'walkway';
     color: #B2B1A1;
-    font-size: 1.25em; }
+    font-size: 2em; }
