@@ -37157,7 +37157,7 @@
 /* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appAbout\">\n  <p style=\"font-size: 2em; line-height: 125%;\">Hey there! I'm Jacob and I'm a full stack web developer.  For those curious, this means I program both backend databases as well as frontend user interfaces for a web browser.  <br><br> The browser is my sandbox, where I make interactive & fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling aesthetics.  <br><br>Computers and digital interaction have always been my passion but I have also studied computer science at the University of Washington and at Code Fellows in Seattle.  My hobbies include CSS/SVG animation and building Computers! :)</p>\n  <!-- <img src=\"\" alt=\"selfie\"> -->\n</main>\n";
+	module.exports = "<main class=\"appAbout\">\n  <p>Hey there! I'm Jacob and I'm a full stack web developer.  For those curious, this means I program both backend databases as well as frontend user interfaces for a web browser.  <br><br> The browser is my sandbox, where I make interactive & fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling aesthetics.  <br><br>Computers and digital interaction have always been my passion but I have also studied computer science at the University of Washington and at Code Fellows in Seattle.  My hobbies include CSS/SVG animation and building Computers! :)</p>\n  <!-- <img src=\"\" alt=\"selfie\"> -->\n</main>\n";
 
 /***/ },
 /* 23 */
@@ -37208,8 +37208,8 @@
 			"Title": "Shooters Log",
 			"DateCompleted": "September 2016",
 			"Images": {
-				"full": "app/scss/lib/asset/screenshot/shootersLog/fullShot.png",
-				"feature": "app/scss/lib/asset/screenshot/shootersLog/featureShot.png"
+				"full": "img/shootersLog/fullShot.png",
+				"feature": "img/shootersLog/featureShot.png"
 			},
 			"Desc": "The shooters log is a full stack web application designed for competitive marksmen.  Once a user registers through the applications signup process, they can create and view scorecards formatted to the specifications of a NRA range master.  At the moment this app only tracks competition scrores, but future releases will track data for rifles and rifle loads, as well as real time data visualization of shot accuracy across competitions.  Also has an accompying iOs app for use out at the range.  Built with angularJS and node.",
 			"Link": "https://github.com/gsmatth/shooters-log-fe"
@@ -37218,8 +37218,8 @@
 			"Title": "Mileage Log",
 			"DateCompleted": "April 2016",
 			"Images": {
-				"full": "app/scss/lib/asset/screenshot/mileageLog/fullShot.png",
-				"feature": "app/scss/lib/asset/screenshot/mileageLog/featureShot.png"
+				"full": "img/mileageLog/fullShot.png",
+				"feature": "img/mileageLog/featureShot.png"
 			},
 			"Desc": "This app is a service for people tracking their miles traveled in a trip. It uses geolocation provided by google maps to track the user and some javscript to calculate the distance from the starting location and the location where the user ends their trip.  Made for truck drivers, couriers, and ride sharers that need to keep track of their miles for tax purposes or other logging purposes.",
 			"Link": "https://github.com/JacobKnaack/Mileage-Tracker"
@@ -37228,8 +37228,8 @@
 			"Title": "ShapesNStuff",
 			"DateCompleted": "March 2016",
 			"Images": {
-				"full": "app/scss/lib/asset/screenshot/shapesNStuff/fullShot.png",
-				"feature": "app/scss/lib/asset/screenshot/shapesNStuff/featureShot.png"
+				"full": "img/shapesNStuff/fullShot.png",
+				"feature": "img/shapesNStuff/featureShot.png"
 			},
 			"Desc": "An app for the creative at heart! allows a user to draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  Once drawn, users can save their shapes to an S3 database.  A user can also upload a photo of their own to edit on the canvas and save for later as well.",
 			"Link": "https://github.com/JacobKnaack/DrawingCanvasProject"
@@ -37283,7 +37283,7 @@
 	}
 
 	$(window).scroll(function () {
-	  $('.app-heading').css('opacity', 1 - $(window).scrollTop() / 250);
+	  $('.app-heading').css('opacity', 1 - $(window).scrollTop() / 200);
 	});
 
 /***/ },
@@ -47408,9 +47408,7 @@
 
 	portfolio.controller('NavController', [NavController]);
 
-	function NavController() {
-	  this.selectView = function (view) {};
-	};
+	function NavController() {}
 
 /***/ },
 /* 39 */

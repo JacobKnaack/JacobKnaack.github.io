@@ -9,9 +9,7 @@ html, body {
 .pageContent {
   position: relative;
   top: 20%;
-  max-width: 75vw;
-  max-height: 75vh;
-  margin: 0 auto;
+  margin: 1vh auto;
   padding: 0 2% 0 2%; }
   .pageContent h1 {
     text-align: center;
@@ -24,6 +22,16 @@ html, body {
     font-family: "master-of-break"; }
   .pageContent p {
     font-family: "walkway"; }
+  .pageContent .appAbout p {
+    font-size: 2em;
+    line-height: 125%;
+    width: 50vw;
+    margin: 0 auto 10vh auto; }
+  @media (max-width: 500px) {
+    .pageContent .appAbout {
+      font-size: 0.7em; }
+      .pageContent .appAbout p {
+        width: 80vw; } }
 @font-face {
   font-family: Anders;
   src: url(fonts/Anders.ttf); }
@@ -37,7 +45,8 @@ html, body {
   padding: 3em;
   border-radius: 10px; }
   .appProject .title {
-    font-family: anders; }
+    font-family: anders;
+    margin: 5vh auto 5vh auto; }
   .appProject h3 {
     font-family: walkway; }
   .appProject .listSelect {
@@ -51,6 +60,8 @@ html, body {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     border-bottom: thin solid #59E7FF; }
     .appProject .listSelect .titlePic {
       max-width: 300px;
@@ -60,6 +71,10 @@ html, body {
       margin: 0 auto 3vh auto;
       border: thin solid #59E7FF;
       border-radius: 50px; }
+      @media (max-width: 500px) {
+        .appProject .listSelect .titlePic {
+          max-width: 120px;
+          max-height: 50px; } }
       .appProject .listSelect .titlePic:hover {
         border-color: #FF73B2; }
       .appProject .listSelect .titlePic:active {
@@ -78,6 +93,12 @@ html, body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    @media (max-width: 500px) {
+      .appProject .projectInfo {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
     .appProject .projectInfo .projectText {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -91,8 +112,11 @@ html, body {
               justify-content: flex-start;
       font-size: 1.5em;
       margin: 2vh 3vw 2vh 3vw; }
+      @media (max-width: 500px) {
+        .appProject .projectInfo .projectText {
+          font-size: 0.9em;
+          margin: 2vh auto 2vh auto; } }
     .appProject .projectInfo .gallery {
-      padding: 10px;
       margin-top: 2vh;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -108,6 +132,10 @@ html, body {
         height: auto;
         margin: 3vh auto 3vh auto;
         border: thin solid #59E7FF; }
+        @media (max-width: 500px) {
+          .appProject .projectInfo .gallery .screenshot {
+            max-width: 75vw;
+            max-height: 50vh; } }
 .app-heading {
   position: fixed;
   z-index: 100;
@@ -133,6 +161,9 @@ html, body {
     height: 7vh;
     margin: 5vh auto 0 10vw;
     border-bottom: solid thin #59E7FF; }
+    @media (max-width: 500px) {
+      .app-heading .logo img {
+        margin: 5vh auto 0 auto; } }
     .app-heading .logo img:hover {
       border: solid thin #CCBC33; }
   .app-heading h1 {
@@ -189,11 +220,19 @@ html, body {
     margin: 0 5% 0 5%;
     text-align: center;
     border-bottom: solid thin #B2B1A1; }
+    @media (max-width: 500px) {
+      .app-nav li {
+        width: 15vw; } }
     .app-nav li a {
       text-decoration: none;
       color: black;
       font-family: Anders;
       font-size: 2em; }
+      @media (max-width: 500px) {
+        .app-nav li a {
+          font-size: 1em; }
+          .app-nav li a:active {
+            border: thin solid #CCBC33; } }
     .app-nav li:hover {
       border: thin solid #CCBC33; }
 .appFooter {
