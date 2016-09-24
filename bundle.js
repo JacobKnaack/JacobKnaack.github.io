@@ -87,9 +87,9 @@
 
 	// directives
 	// components
-	__webpack_require__(31);
-	__webpack_require__(38);
-	__webpack_require__(42);
+	__webpack_require__(32);
+	__webpack_require__(39);
+	__webpack_require__(43);
 
 /***/ },
 /* 1 */
@@ -37157,13 +37157,13 @@
 /* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appAbout\">\n  <p>Hey there! I'm Jacob and I'm a full stack web developer.  For those curious, this means I program both backend databases as well as frontend user interfaces for a web browser.  <br><br> The browser is my sandbox, where I make interactive & fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling aesthetics.  <br><br>Computers and digital interaction have always been my passion but I have also studied computer science at the University of Washington and at Code Fellows in Seattle.  My hobbies include CSS/SVG animation and building Computers! :)</p>\n  <!-- <img src=\"\" alt=\"selfie\"> -->\n</main>\n";
+	module.exports = "<main class=\"appAbout\">\n  <p>Hey there! I'm Jacob and I'm a full stack web developer.  For those curious, this means I program both backend databases as well as frontend user interfaces for web browsers.  <br><br> The browser is my sandbox, where I make interactive & fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling design.  <br><br>Computers and digital interaction have always been my passion but I have also studied computer science at the University of Washington and at Code Fellows in Seattle.  My hobbies include CSS/SVG animation and building Computers!</p>\n</main>\n";
 
 /***/ },
 /* 23 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\"> {{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n\n  <h3 ng-hide=\"!portfolioCtrl.displayProject.Link\">Check this project out on github: <a target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\">link</a></h3>\n</main>\n";
+	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"links\">\n    <a ng-hide=\"!portfolioCtrl.displayProject.Link\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\"><img class=\"githubLink\" ng-src=\"{{portfolioCtrl.githubIcon}}\" alt=\"github link\"></a>\n  </div>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\"> {{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n</main>\n";
 
 /***/ },
 /* 24 */
@@ -37179,12 +37179,14 @@
 	portfolio.controller('PortfolioController', [PortfolioController]);
 
 	function PortfolioController() {
-	  this.projects = __webpack_require__(27);
+	  this.githubIcon = __webpack_require__(27);
+
+	  this.projects = __webpack_require__(28);
 
 	  this.titles = {
-	    shootersLog: __webpack_require__(28),
-	    mileageLog: __webpack_require__(29),
-	    shapesNStuff: __webpack_require__(30)
+	    shootersLog: __webpack_require__(29),
+	    mileageLog: __webpack_require__(30),
+	    shapesNStuff: __webpack_require__(31)
 	  };
 
 	  this.selectProject = function (project) {
@@ -37201,6 +37203,12 @@
 /***/ },
 /* 26 */,
 /* 27 */
+/***/ function(module, exports) {
+
+	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4Ni4zIDg5LjgiPjxkZWZzPjxzdHlsZT4uY2xzLTEsLmNscy02e2ZpbGw6bm9uZTt9LmNscy0xLC5jbHMtMiwuY2xzLTN7c3Ryb2tlOiNiMmIxYTE7fS5jbHMtMSwuY2xzLTIsLmNscy02e3N0cm9rZS1taXRlcmxpbWl0OjEwO30uY2xzLTF7c3Ryb2tlLXdpZHRoOjVweDt9LmNscy0yLC5jbHMtMywuY2xzLTV7ZmlsbDojYjJiMWExO30uY2xzLTIsLmNscy0ze3N0cm9rZS13aWR0aDoycHg7fS5jbHMtM3tzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7fS5jbHMtNHtmaWxsOiNmZmY7fS5jbHMtNntzdHJva2U6I2ZmZjtzdHJva2Utd2lkdGg6MC4yNXB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+Z2l0aHViLWxpbms8L3RpdGxlPjxnIGlkPSJEb29yIj48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjQzLjIiIGN5PSI0NS4yIiByPSI0MC4yIi8+PGVsbGlwc2UgY2xhc3M9ImNscy0yIiBjeD0iNDMuMiIgY3k9IjM4LjIiIHJ4PSIxNy45IiByeT0iMTMiLz48cG9seWdvbiBjbGFzcz0iY2xzLTMiIHBvaW50cz0iMjguMiAyMS4xIDM2LjMgMjUuOCAyOC4yIDMwLjUgMjguMiAyMS4xIi8+PHBvbHlnb24gY2xhc3M9ImNscy0zIiBwb2ludHM9IjU4IDIxLjEgNDkuOSAyNS44IDU4IDMwLjUgNTggMjEuMSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTU1LDY3LjNjMC0xMC01LjMtMTguMS0xMS44LTE4LjFTMzEuNCw1Ny4zLDMxLjQsNjcuM2MwLDQuNi0uMywxMC43LDEuNSwxMy44czYuOCw0LjMsMTAuMyw0LjMsOC4zLjYsMTAuNC0zLjFTNTUsNzEuOSw1NSw2Ny4zWiIvPjxlbGxpcHNlIGNsYXNzPSJjbHMtNCIgY3g9IjM2LjEiIGN5PSIzOC4xIiByeD0iMS44IiByeT0iMy44Ii8+PGVsbGlwc2UgY2xhc3M9ImNscy00IiBjeD0iNTAiIGN5PSIzOC4xIiByeD0iMS44IiByeT0iMy44Ii8+PHBhdGggY2xhc3M9ImNscy01IiBkPSJNMTYuMSw1Mi4xaC4zbDEtLjJIMTlhNy4yLDcuMiwwLDAsMSwyLjIuNWwxLjIuNi42LjUuNy43QTYuOSw2LjksMCwwLDEsMjUsNTcuM2MuMSwxLC4yLDEuOS4yLDIuNWEzLjQsMy40LDAsMCwwLC4yLjdjLjEuMS4xLjEuMS4xaC0uMWwtLjItLjJoMi4zbDItLjIsMS45LS4yYTguOCw4LjgsMCwwLDEsMy4xLjVsMS4zLjZoMGExLjUsMS41LDAsMCwxLC42LDEuOSw1LjUsNS41LDAsMCwxLS45LDEuMiw3LjMsNy4zLDAsMCwxLTIuOSwxLjksOS43LDkuNywwLDAsMS0yLjIuNWwtMi42LjJhMTcuNCwxNy40LDAsMCwxLTMtLjFsLTEuOS0uNS0xLjItLjctLjUtLjRIMjFsLS4yLS4yaC0uMWwtLjItLjNhNiw2LDAsMCwxLS44LTIuMyw4LjIsOC4yLDAsMCwxLS4xLTEuOGMuMS0xLC4yLTEuOC4zLTIuNGE4LjIsOC4yLDAsMCwwLC4xLTEuMWMuMS0uMS0uMy0uNi0uNi0uOWwtMS4xLS44LTEtLjQtLjctLjJoLS4zYTEsMSwwLDAsMS0uMy0xLjlaIi8+PGVsbGlwc2UgY2xhc3M9ImNscy02IiBjeD0iMTguMiIgY3k9IjUyLjYiIHJ4PSIwLjYiIHJ5PSIwLjUiLz48ZWxsaXBzZSBjbGFzcz0iY2xzLTYiIGN4PSIyMC45IiBjeT0iNTMuMiIgcng9IjAuNSIgcnk9IjAuNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM0LjIgNjguMykgcm90YXRlKC04My45KSIvPjxlbGxpcHNlIGNsYXNzPSJjbHMtNiIgY3g9IjIyLjgiIGN5PSI1NC45IiByeD0iMC41IiByeT0iMC42IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzQuMiA3MS43KSByb3RhdGUoLTgzLjkpIi8+PGVsbGlwc2UgY2xhc3M9ImNscy02IiBjeD0iMjMuOCIgY3k9IjU3LjEiIHJ4PSIwLjUiIHJ5PSIwLjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zNS41IDc0LjYpIHJvdGF0ZSgtODMuOSkiLz48ZWxsaXBzZSBjbGFzcz0iY2xzLTYiIGN4PSIyNC4xIiBjeT0iNTkuNSIgcng9IjAuNSIgcnk9IjAuNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQwIDU4LjEpIHJvdGF0ZSgtNjYuNykiLz48ZWxsaXBzZSBjbGFzcz0iY2xzLTYiIGN4PSIyNS42IiBjeT0iNjEuMiIgcng9IjAuNSIgcnk9IjAuNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyLjUgNi45KSByb3RhdGUoLTEyLjMpIi8+PGVsbGlwc2UgY2xhc3M9ImNscy02IiBjeD0iMjcuOSIgY3k9IjYxLjIiIHJ4PSIwLjUiIHJ5PSIwLjYiLz48L2c+PC9zdmc+"
+
+/***/ },
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -37221,53 +37229,53 @@
 				"full": "img/mileageLog/fullShot.png",
 				"feature": "img/mileageLog/featureShot.png"
 			},
-			"Desc": "This app is a service for people tracking their miles traveled in a trip. It uses geolocation provided by google maps to track the user and some javscript to calculate the distance from the starting location and the location where the user ends their trip.  Made for truck drivers, couriers, and ride sharers that need to keep track of their miles for tax purposes or other logging purposes.",
+			"Desc": "This app is a service for people tracking their miles traveled in a trip. It uses geolocation provided by google maps to track the user and some javscript to calculate the distance from the starting location and the location where the user ends their trip.  Made for truck drivers, couriers, and ride sharers that need to keep track of their miles for tax purposes or simply tracking their distance traveled.",
 			"Link": "https://github.com/JacobKnaack/Mileage-Tracker"
 		},
 		"ShapesNStuff": {
-			"Title": "ShapesNStuff",
+			"Title": "Shapes n'Stuff",
 			"DateCompleted": "March 2016",
 			"Images": {
 				"full": "img/shapesNStuff/fullShot.png",
 				"feature": "img/shapesNStuff/featureShot.png"
 			},
-			"Desc": "An app for the creative at heart! allows a user to draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  Once drawn, users can save their shapes to an S3 database.  A user can also upload a photo of their own to edit on the canvas and save for later as well.",
+			"Desc": "An app for the creative at heart! Shapesn'stuff lets a user to draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  This work of art can then be saved using an amazon s3 database backend.  A user can also upload an image of their own and draw over it! Once saved to the database, users will able to view the shapesn'stuff gallery with all the projects created using the app.",
 			"Link": "https://github.com/JacobKnaack/DrawingCanvasProject"
 		}
 	};
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/6422393cf1b95637c226a9cd21d07b51.png";
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/d7a6d49733520005e7dfeab74bc9e8a3.png";
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "img/ed7f4841ae30bdc7fe77703aec127e0d.png";
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(32);
+	__webpack_require__(33);
 
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
-	var $ = __webpack_require__(34);
+	var $ = __webpack_require__(35);
 
 	portfolio.component('appHeading', {
-	  template: __webpack_require__(35),
+	  template: __webpack_require__(36),
 	  controller: 'HeadingController',
 	  controllerAs: 'headingCtrl'
 	});
@@ -37278,8 +37286,8 @@
 	  $log.debug('init HeadingController');
 
 	  this.homeScreen = true;
-	  this.enter = __webpack_require__(36);
-	  this.logo = __webpack_require__(37);
+	  this.enter = __webpack_require__(37);
+	  this.logo = __webpack_require__(38);
 	}
 
 	$(window).scroll(function () {
@@ -37287,14 +37295,14 @@
 	});
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 33 */,
-/* 34 */
+/* 34 */,
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -47374,36 +47382,36 @@
 
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	module.exports = "<header class=\"app-heading\">\n  <a class=\"entrance\" ng-click=\"$Ctrl.homeScreen = !$Ctrl.homeScreen\" ng-hide=\"$Ctrl.homeScreen\" href=\"#/about\">\n    <svg class=\"enter\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 242 216\">\n    <defs>\n      <style>.cls-1{fill:none;stroke-width:3px;}.cls-1,.cls-2{stroke:#ccbc33;stroke-miterlimit:10;}.cls-2{fill:#ff73b2;stroke-width:4px;}.cls-3{fill:#ccbc33;}</style>\n    </defs>\n    <title>enter</title>\n    <g id=\"Frame\">\n      <path class=\"cls-1\" d=\"M154.9,164.4l-67.3,8.1a5,5,0,0,1-5.6-5V48.4a5,5,0,0,1,5.8-4.9l68,11.5a5,5,0,0,1,4.2,5l-.7,99.5A5,5,0,0,1,154.9,164.4Z\"/>\n    </g>\n    <g id=\"Door\">\n      <path class=\"cls-2\" d=\"M152.8, 161.8l-63.2, 7.8a4.7, 4.7, 0, 0, 1-5.3-4.7V51.2a4.7, 4.7, 0, 0, 1, 5.5-4.7l63.8, 11a4.7, 4.7, 0, 0, 1, 3.9, 4.7l-.7, 94.9A4.7, 4.7, 0, 0, 1, 152.8, 161.8Z\"/>\n      <ellipse class=\"cls-3\" cx=\"93\" cy=\"108\" rx=\"3.8\" ry=\"4.7\" transform=\"matrix(1, -0.1, 0.1, 1, -9.93, 9.42)\"/>\n    </g>\n    </svg>\n  </a>\n\n  <div class=\"icons\">\n    <a class=\"logo\" ng-click=\"$Ctrl.homeScreen = !$Ctrl.homeScreen\" href=\"#/home\" ng-if=\"$Ctrl.homeScreen\"><img ng-src=\"{{headingCtrl.logo}}\" alt=\"logo\"></a>\n    <app-nav ng-if=\"$Ctrl.homeScreen\" class=\"nav-exit\"></app-nav>\n  </div>\n</header>\n";
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDIgMjE2Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZS13aWR0aDozcHg7fS5jbHMtMSwuY2xzLTJ7c3Ryb2tlOiNjY2JjMzM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5jbHMtMntmaWxsOiNmZjczYjI7c3Ryb2tlLXdpZHRoOjRweDt9LmNscy0ze2ZpbGw6I2NjYmMzMzt9PC9zdHlsZT4KICA8L2RlZnM+CiAgPHRpdGxlPmVudGVyPC90aXRsZT4KICA8ZyBpZD0iRnJhbWUiPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTU0LjksMTY0LjRsLTY3LjMsOC4xYTUsNSwwLDAsMS01LjYtNVY0OC40YTUsNSwwLDAsMSw1LjgtNC45bDY4LDExLjVhNSw1LDAsMCwxLDQuMiw1bC0uNyw5OS41QTUsNSwwLDAsMSwxNTQuOSwxNjQuNFoiLz4KICA8L2c+CiAgPGcgaWQ9IkRvb3IiPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTUyLjgsIDE2MS44bC02My4yLCA3LjhhNC43LCA0LjcsIDAsIDAsIDEtNS4zLTQuN1Y1MS4yYTQuNywgNC43LCAwLCAwLCAxLCA1LjUtNC43bDYzLjgsIDExYTQuNywgNC43LCAwLCAwLCAxLCAzLjksIDQuN2wtLjcsIDk0LjlBNC43LCA0LjcsIDAsIDAsIDEsIDE1Mi44LCAxNjEuOFoiLz4KICAgIDxlbGxpcHNlIGNsYXNzPSJjbHMtMyIgY3g9IjkzIiBjeT0iMTA4IiByeD0iMy44IiByeT0iNC43IiB0cmFuc2Zvcm09Im1hdHJpeCgxLCAtMC4xLCAwLjEsIDEsIC05LjkzLCA5LjQyKSIvPgogIDwvZz4KPC9zdmc+Cg=="
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTcgNDYxIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2NjYmMzMzt9LmNscy0ye2ZpbGw6IzU5ZTdmZjt9LmNscy0yLC5jbHMtM3tvcGFjaXR5OjAuODt9LmNscy0ze2ZpbGw6I2ZmNzNiMjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmxvZ288L3RpdGxlPjxnIGlkPSJMZXR0ZXJzIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMjE5IDM2OCA2Ny4xIDI4MC4zIDIxOSA3MyAyMTkgMzY4Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjI5MSA3MyA0NDIuOSA3MyAyOTEgMzY4IDI5MSA3MyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyOTEgMzY4IDQ0Mi45IDM2OCAyOTEgNzMgMjkxIDM2OCIvPjwvZz48L3N2Zz4="
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(39);
+	__webpack_require__(40);
 
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
 
 	portfolio.component('appNav', {
-	  template: __webpack_require__(41)
+	  template: __webpack_require__(42)
 	});
 
 	portfolio.controller('NavController', [NavController]);
@@ -47411,42 +47419,42 @@
 	function NavController() {}
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 40 */,
-/* 41 */
+/* 41 */,
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav class=\"app-nav\">\n  <ul class=\"tabs\">\n    <li>\n      <a href=\"#/project\"> My Work </a>\n    </li>\n    <li>\n      <a href=\"#/about\"> About Me </a>\n    </li>\n  </ul>\n</nav>\n";
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(43);
+	__webpack_require__(44);
 
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
 
 	portfolio.component('appFooter', {
-	  template: __webpack_require__(45)
+	  template: __webpack_require__(46)
 	});
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 44 */,
-/* 45 */
+/* 45 */,
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = "<footer class=\"appFooter\">\n  <p>&copy Jacob Knaack 2016</p>\n</footer>\n";
