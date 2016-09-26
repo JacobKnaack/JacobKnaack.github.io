@@ -26,6 +26,7 @@ html, body {
     font-size: 1.7em;
     line-height: 125%;
     width: 50vw;
+    padding-bottom: 2vh;
     margin: 0 auto 10vh auto; }
   @media (max-width: 500px) {
     .pageContent .appAbout {
@@ -42,7 +43,7 @@ html, body {
   font-family: master-of-break;
   src: url(fonts/Master-of-Break.ttf); }
 .appProject {
-  padding: 3em;
+  padding: 2em;
   border-radius: 10px; }
   .appProject .title {
     font-family: anders;
@@ -50,11 +51,23 @@ html, body {
   .appProject .links {
     width: 20vw;
     margin: 0 auto;
-    text-align: center; }
-    .appProject .links .githubLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .appProject .links .githubLink, .appProject .links .appLink {
       width: 5vw;
-      margin: 0 auto; }
-      .appProject .links .githubLink:hover {
+      margin: 0 2vw 0 2vw; }
+      @media (max-width: 500px) {
+        .appProject .links .githubLink, .appProject .links .appLink {
+          width: 10vw; } }
+      .appProject .links .githubLink:hover, .appProject .links .appLink:hover {
         border-bottom: thin solid #B2B1A1; }
   .appProject h3 {
     font-family: walkway; }
@@ -231,7 +244,8 @@ html, body {
     border-bottom: solid thin #B2B1A1; }
     @media (max-width: 500px) {
       .app-nav li {
-        width: 15vw; } }
+        width: 15vw;
+        margin: 0 8% 0 8%; } }
     .app-nav li a {
       text-decoration: none;
       color: black;

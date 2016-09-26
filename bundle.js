@@ -87,9 +87,9 @@
 
 	// directives
 	// components
-	__webpack_require__(32);
-	__webpack_require__(39);
-	__webpack_require__(43);
+	__webpack_require__(33);
+	__webpack_require__(40);
+	__webpack_require__(44);
 
 /***/ },
 /* 1 */
@@ -37151,7 +37151,7 @@
 /* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appHomeScreen\" ng-init=\"headingCtrl.homeScreen = !headingCtrl.homeScreen\">\n  <h1 style=\"font-size: 4em;\">jacob knaack</h1>\n  <h2 style=\"font-size: 4em;\">Web + Design</h2>\n</main>\n";
+	module.exports = "<main class=\"appHomeScreen\">\n  <h1 style=\"font-size: 4em;\">jacob knaack</h1>\n  <h2 style=\"font-size: 4em;\">Web + Design</h2>\n</main>\n\n<!-- ng-init=\"headingCtrl.homeScreen = !headingCtrl.homeScreen\" -->\n";
 
 /***/ },
 /* 22 */
@@ -37163,7 +37163,7 @@
 /* 23 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"links\">\n    <a ng-hide=\"!portfolioCtrl.displayProject.Link\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\"><img class=\"githubLink\" ng-src=\"{{portfolioCtrl.githubIcon}}\" alt=\"github link\"></a>\n  </div>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\"> {{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n</main>\n";
+	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"links\">\n    <a ng-hide=\"!portfolioCtrl.displayProject.Link\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\"><img class=\"githubLink\" ng-src=\"{{portfolioCtrl.githubIcon}}\" alt=\"github link\"></a>\n    <a ng-hide=\"!portfolioCtrl.displayProject.appLink\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.appLink}}\"><img class=\"appLink\" ng-src=\"{{portfolioCtrl.applicationIcon}}\" alt=\"link to app\"></a>\n  </div>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\"> {{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n</main>\n";
 
 /***/ },
 /* 24 */
@@ -37180,13 +37180,14 @@
 
 	function PortfolioController() {
 	  this.githubIcon = __webpack_require__(27);
+	  this.applicationIcon = __webpack_require__(28);
 
-	  this.projects = __webpack_require__(28);
+	  this.projects = __webpack_require__(29);
 
 	  this.titles = {
-	    shootersLog: __webpack_require__(29),
-	    mileageLog: __webpack_require__(30),
-	    shapesNStuff: __webpack_require__(31)
+	    shootersLog: __webpack_require__(30),
+	    mileageLog: __webpack_require__(31),
+	    shapesNStuff: __webpack_require__(32)
 	  };
 
 	  this.selectProject = function (project) {
@@ -37211,6 +37212,12 @@
 /* 28 */
 /***/ function(module, exports) {
 
+	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4Ni4zIDg5LjgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojYjJiMWExO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O30uY2xzLTJ7Zm9udC1zaXplOjIxcHg7ZmlsbDojYjJiMWExO2ZvbnQtZmFtaWx5OkJFWU5PLCBCRVlOTzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFwcGxpY2F0aW9uLWxpbms8L3RpdGxlPjxnIGlkPSJEb29yIj48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjMuMSIgeT0iMTUuOSIgd2lkdGg9IjgwLjIiIGhlaWdodD0iNTgiIHJ4PSI2LjYiIHJ5PSI2LjYiLz48dGV4dCBjbGFzcz0iY2xzLTIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuNyA1MS42KSI+V1dXLjwvdGV4dD48L2c+PC9zdmc+"
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
 	module.exports = {
 		"ShootersLog": {
 			"Title": "Shooters Log",
@@ -37219,8 +37226,9 @@
 				"full": "img/shootersLog/fullShot.png",
 				"feature": "img/shootersLog/featureShot.png"
 			},
-			"Desc": "The shooters log is a full stack web application designed for competitive marksmen.  Once a user registers through the applications signup process, they can create and view scorecards formatted to the specifications of a NRA range master.  At the moment this app only tracks competition scrores, but future releases will track data for rifles and rifle loads, as well as real time data visualization of shot accuracy across competitions.  Also has an accompying iOs app for use out at the range.  Built with angularJS and node.",
-			"Link": "https://github.com/gsmatth/shooters-log-fe"
+			"Desc": "The shooters log is a full stack web application designed for competitive marksmen.  Once a user registers through the applications signup process, they can create and view scorecards formatted to the specifications of a NRA range master.  At the moment this app only tracks competition scrores, but future releases will track data for rifles and rifle loads, as well as real time data visualization of shot accuracy across competitions.  Shooters Log also has an accompanying iOs app for use out at the range.  Built with angularJS and node.",
+			"Link": "https://github.com/gsmatth/shooters-log-fe",
+			"appLink": "https://shooters-log-fe-staging.herokuapp.com/#/signin"
 		},
 		"MileageLog": {
 			"Title": "Mileage Log",
@@ -37229,53 +37237,55 @@
 				"full": "img/mileageLog/fullShot.png",
 				"feature": "img/mileageLog/featureShot.png"
 			},
-			"Desc": "This app is a service for people tracking their miles traveled in a trip. It uses geolocation provided by google maps to track the user and some javscript to calculate the distance from the starting location and the location where the user ends their trip.  Made for truck drivers, couriers, and ride sharers that need to keep track of their miles for tax purposes or simply tracking their distance traveled.",
-			"Link": "https://github.com/JacobKnaack/Mileage-Tracker"
+			"Desc": "This app is a service for people tracking their miles traveled in a trip. It uses geolocation provided by google maps to track the user and JavaScript to calculate the distance from the starting location and the location where the user ends their trip.  Made for truck drivers, couriers, and ride sharers that need to keep track of their miles for tax purposes or simply tracking their distance traveled.",
+			"Link": "https://github.com/JacobKnaack/Mileage-Tracker",
+			"appLink": ""
 		},
 		"ShapesNStuff": {
-			"Title": "Shapes n'Stuff",
+			"Title": "Shapes'n Stuff",
 			"DateCompleted": "March 2016",
 			"Images": {
 				"full": "img/shapesNStuff/fullShot.png",
 				"feature": "img/shapesNStuff/featureShot.png"
 			},
-			"Desc": "An app for the creative at heart! Shapesn'stuff lets a user to draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  This work of art can then be saved using an amazon s3 database backend.  A user can also upload an image of their own and draw over it! Once saved to the database, users will able to view the shapesn'stuff gallery with all the projects created using the app.",
-			"Link": "https://github.com/JacobKnaack/DrawingCanvasProject"
+			"Desc": "An app for the creative at heart! Shapes'nstuff lets a user draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  This work of art can then be saved using an amazon s3 database backend.  A user can also upload an image of their own and draw over it! Once saved to the database, users will able to view the shapes'nstuff gallery with all the projects created using the app.",
+			"Link": "https://github.com/JacobKnaack/DrawingCanvasProject",
+			"appLink": ""
 		}
 	};
-
-/***/ },
-/* 29 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "img/6422393cf1b95637c226a9cd21d07b51.png";
 
 /***/ },
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "img/d7a6d49733520005e7dfeab74bc9e8a3.png";
+	module.exports = __webpack_require__.p + "img/6422393cf1b95637c226a9cd21d07b51.png";
 
 /***/ },
 /* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "img/ed7f4841ae30bdc7fe77703aec127e0d.png";
+	module.exports = __webpack_require__.p + "img/d7a6d49733520005e7dfeab74bc9e8a3.png";
 
 /***/ },
 /* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "img/ed7f4841ae30bdc7fe77703aec127e0d.png";
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
-	__webpack_require__(33);
+	__webpack_require__(34);
 
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
-	var $ = __webpack_require__(35);
+	var $ = __webpack_require__(36);
 
 	portfolio.component('appHeading', {
-	  template: __webpack_require__(36),
+	  template: __webpack_require__(37),
 	  controller: 'HeadingController',
 	  controllerAs: 'headingCtrl'
 	});
@@ -37286,8 +37296,8 @@
 	  $log.debug('init HeadingController');
 
 	  this.homeScreen = true;
-	  this.enter = __webpack_require__(37);
-	  this.logo = __webpack_require__(38);
+	  this.enter = __webpack_require__(38);
+	  this.logo = __webpack_require__(39);
 	}
 
 	$(window).scroll(function () {
@@ -37295,14 +37305,14 @@
 	});
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -47382,36 +47392,36 @@
 
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports) {
 
 	module.exports = "<header class=\"app-heading\">\n  <a class=\"entrance\" ng-click=\"$Ctrl.homeScreen = !$Ctrl.homeScreen\" ng-hide=\"$Ctrl.homeScreen\" href=\"#/about\">\n    <svg class=\"enter\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 242 216\">\n    <defs>\n      <style>.cls-1{fill:none;stroke-width:3px;}.cls-1,.cls-2{stroke:#ccbc33;stroke-miterlimit:10;}.cls-2{fill:#ff73b2;stroke-width:4px;}.cls-3{fill:#ccbc33;}</style>\n    </defs>\n    <title>enter</title>\n    <g id=\"Frame\">\n      <path class=\"cls-1\" d=\"M154.9,164.4l-67.3,8.1a5,5,0,0,1-5.6-5V48.4a5,5,0,0,1,5.8-4.9l68,11.5a5,5,0,0,1,4.2,5l-.7,99.5A5,5,0,0,1,154.9,164.4Z\"/>\n    </g>\n    <g id=\"Door\">\n      <path class=\"cls-2\" d=\"M152.8, 161.8l-63.2, 7.8a4.7, 4.7, 0, 0, 1-5.3-4.7V51.2a4.7, 4.7, 0, 0, 1, 5.5-4.7l63.8, 11a4.7, 4.7, 0, 0, 1, 3.9, 4.7l-.7, 94.9A4.7, 4.7, 0, 0, 1, 152.8, 161.8Z\"/>\n      <ellipse class=\"cls-3\" cx=\"93\" cy=\"108\" rx=\"3.8\" ry=\"4.7\" transform=\"matrix(1, -0.1, 0.1, 1, -9.93, 9.42)\"/>\n    </g>\n    </svg>\n  </a>\n\n  <div class=\"icons\">\n    <a class=\"logo\" ng-click=\"$Ctrl.homeScreen = !$Ctrl.homeScreen\" href=\"#/home\" ng-if=\"$Ctrl.homeScreen\"><img ng-src=\"{{headingCtrl.logo}}\" alt=\"logo\"></a>\n    <app-nav ng-if=\"$Ctrl.homeScreen\" class=\"nav-exit\"></app-nav>\n  </div>\n</header>\n";
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDIgMjE2Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZS13aWR0aDozcHg7fS5jbHMtMSwuY2xzLTJ7c3Ryb2tlOiNjY2JjMzM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5jbHMtMntmaWxsOiNmZjczYjI7c3Ryb2tlLXdpZHRoOjRweDt9LmNscy0ze2ZpbGw6I2NjYmMzMzt9PC9zdHlsZT4KICA8L2RlZnM+CiAgPHRpdGxlPmVudGVyPC90aXRsZT4KICA8ZyBpZD0iRnJhbWUiPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTU0LjksMTY0LjRsLTY3LjMsOC4xYTUsNSwwLDAsMS01LjYtNVY0OC40YTUsNSwwLDAsMSw1LjgtNC45bDY4LDExLjVhNSw1LDAsMCwxLDQuMiw1bC0uNyw5OS41QTUsNSwwLDAsMSwxNTQuOSwxNjQuNFoiLz4KICA8L2c+CiAgPGcgaWQ9IkRvb3IiPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTUyLjgsIDE2MS44bC02My4yLCA3LjhhNC43LCA0LjcsIDAsIDAsIDEtNS4zLTQuN1Y1MS4yYTQuNywgNC43LCAwLCAwLCAxLCA1LjUtNC43bDYzLjgsIDExYTQuNywgNC43LCAwLCAwLCAxLCAzLjksIDQuN2wtLjcsIDk0LjlBNC43LCA0LjcsIDAsIDAsIDEsIDE1Mi44LCAxNjEuOFoiLz4KICAgIDxlbGxpcHNlIGNsYXNzPSJjbHMtMyIgY3g9IjkzIiBjeT0iMTA4IiByeD0iMy44IiByeT0iNC43IiB0cmFuc2Zvcm09Im1hdHJpeCgxLCAtMC4xLCAwLjEsIDEsIC05LjkzLCA5LjQyKSIvPgogIDwvZz4KPC9zdmc+Cg=="
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTcgNDYxIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2NjYmMzMzt9LmNscy0ye2ZpbGw6IzU5ZTdmZjt9LmNscy0yLC5jbHMtM3tvcGFjaXR5OjAuODt9LmNscy0ze2ZpbGw6I2ZmNzNiMjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmxvZ288L3RpdGxlPjxnIGlkPSJMZXR0ZXJzIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMjE5IDM2OCA2Ny4xIDI4MC4zIDIxOSA3MyAyMTkgMzY4Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjI5MSA3MyA0NDIuOSA3MyAyOTEgMzY4IDI5MSA3MyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyOTEgMzY4IDQ0Mi45IDM2OCAyOTEgNzMgMjkxIDM2OCIvPjwvZz48L3N2Zz4="
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(40);
+	__webpack_require__(41);
 
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
 
 	portfolio.component('appNav', {
-	  template: __webpack_require__(42)
+	  template: __webpack_require__(43)
 	});
 
 	portfolio.controller('NavController', [NavController]);
@@ -47419,42 +47429,42 @@
 	function NavController() {}
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 41 */,
-/* 42 */
+/* 42 */,
+/* 43 */
 /***/ function(module, exports) {
 
 	module.exports = "<nav class=\"app-nav\">\n  <ul class=\"tabs\">\n    <li>\n      <a href=\"#/project\"> My Work </a>\n    </li>\n    <li>\n      <a href=\"#/about\"> About Me </a>\n    </li>\n  </ul>\n</nav>\n";
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	__webpack_require__(44);
+	__webpack_require__(45);
 
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
 
 	portfolio.component('appFooter', {
-	  template: __webpack_require__(46)
+	  template: __webpack_require__(47)
 	});
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 45 */,
-/* 46 */
+/* 46 */,
+/* 47 */
 /***/ function(module, exports) {
 
 	module.exports = "<footer class=\"appFooter\">\n  <p>&copy Jacob Knaack 2016</p>\n</footer>\n";
