@@ -22,17 +22,23 @@ html, body {
     font-family: "master-of-break"; }
   .pageContent p {
     font-family: "walkway"; }
-  .pageContent .appAbout p {
-    font-size: 1.7em;
-    line-height: 125%;
-    width: 50vw;
-    padding-bottom: 2vh;
-    margin: 0 auto 10vh auto; }
-  @media (max-width: 500px) {
-    .pageContent .appAbout {
-      font-size: 0.7em; }
-      .pageContent .appAbout p {
-        width: 80vw; } }
+  .pageContent .appAbout {
+    padding-bottom: 5vh; }
+    .pageContent .appAbout .contactInfo {
+      text-align: center;
+      margin: 0 auto; }
+      .pageContent .appAbout .contactInfo h3 {
+        font-family: 'walkway'; }
+    .pageContent .appAbout .text p {
+      font-size: 1.7em;
+      line-height: 125%;
+      width: 50vw;
+      margin: 5vh auto 10vh auto; }
+    @media (max-width: 500px) {
+      .pageContent .appAbout .text {
+        font-size: 0.7em; }
+        .pageContent .appAbout .text p {
+          width: 80vw; } }
 @font-face {
   font-family: Anders;
   src: url(fonts/Anders.ttf); }

@@ -37157,7 +37157,7 @@
 /* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appAbout\">\n  <p>Hey there! I'm Jacob and I'm a full stack web developer.  For those curious, this means I program both backend databases as well as frontend user interfaces for web browsers.  <br><br> The browser is my sandbox, where I make interactive & fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling design.  <br><br>Computers and digital interaction have always been my passion but I have also studied computer science at the University of Washington and at Code Fellows in Seattle.  My hobbies include CSS/SVG animation and building Computers!</p>\n</main>\n";
+	module.exports = "<main class=\"appAbout\">\n\n  <div class=\"text\">\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Hi! I'm Jacob and I am a full stack web developer.</strong><br>I program both backend databases as well as frontend user interfaces for web browsers.  I also create my own custom artwork and animations.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">The Browser is my Sandbox.</strong><br> With it I make interactive & fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling design.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Digital Interaction and Communication are my passion.</strong><br> Using technology to make life more enjoyable is my goal.  Todays tools should be easy to interact with and have a clear central purpose.  Everyday I strive to create simple user friendly solutions that are fun to use.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">My Skill Set is Broad.</strong><br> I have studied Computer Science as well as earned a degree in Psychology and Linguistics from the University of Washington.  I'm a certified JavaScript developer from Code Fellows and earned a certificate in technical communication from the UW.  My hobbies include CSS/SVG animation and building Computers!</p>\n  </div>\n\n  <div class=\"contactInfo\">\n    <h3>Contact Me:</h3>\n    <p>206-850-9388</p>\n    <p>jacobknck@gmail.com</p>\n    <p>github.com/jacobknaack</p>\n  </div>\n\n</main>\n";
 
 /***/ },
 /* 23 */
@@ -37301,7 +37301,7 @@
 	}
 
 	$(window).scroll(function () {
-	  $('.app-heading').css('opacity', 1 - $(window).scrollTop() / 200);
+	  $('.app-heading').css('opacity', 1 - $(window).scrollTop() / 100);
 	});
 
 /***/ },
