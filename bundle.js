@@ -37151,13 +37151,13 @@
 /* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appHomeScreen\">\n  <h1 style=\"font-size: 4em;\">jacob knaack</h1>\n  <h2 style=\"font-size: 4em;\">Web + Design</h2>\n</main>\n\n<!-- ng-init=\"headingCtrl.homeScreen = !headingCtrl.homeScreen\" -->\n";
+	module.exports = "<main class=\"appHomeScreen\">\n  <h1>Jacob Knaack</h1>\n  <h2>Web + Design</h2>\n</main>\n";
 
 /***/ },
 /* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appAbout\">\n\n  <div class=\"text\">\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Hi! I'm Jacob and I am a full stack web developer.</strong><br>I program both backend databases as well as frontend user interfaces for web browsers.  I also create my own custom artwork and animations.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">The Browser is my Sandbox.</strong><br> With it I make interactive & fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling design.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Digital Interaction and Communication are my passion.</strong><br> Using technology to make life more enjoyable is my goal.  Todays tools should be easy to interact with and have a clear central purpose.  Everyday I strive to create simple user friendly solutions that are fun to use.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">My Skill Set is Broad.</strong><br> I have studied Computer Science as well as earned a degree in Psychology and Linguistics from the University of Washington.  I'm a certified JavaScript developer from Code Fellows and earned a certificate in technical communication from the UW.  My hobbies include CSS/SVG animation and building Computers!</p>\n  </div>\n\n  <div class=\"contactInfo\">\n    <h3>Contact Me:</h3>\n    <p>206-850-9388</p>\n    <p>jacobknck@gmail.com</p>\n    <p>github.com/jacobknaack</p>\n  </div>\n\n</main>\n";
+	module.exports = "<main class=\"appAbout\">\n\n  <div class=\"text\">\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Hi! I'm Jacob and I am a full stack web developer</strong><br>I program both backend databases as well as frontend user interfaces for web browsers.  I also create my own custom artwork and animations.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">The Browser is My Sandbox.</strong><br> With it I make interactive and fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling design.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Digital Interaction and Communication are my passion</strong><br> Using technology to make life more enjoyable is my goal.  Today's tools should be easy to interact with and have a clear central purpose.  Everyday I strive to create simple user friendly solutions that are fun to use.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">My Skill Set is Broad</strong><br> I have studied Computer Science as well as earned a degree in Psychology and Linguistics from the University of Washington.  I'm a certified JavaScript developer from Code Fellows and earned a certificate in technical communication from the UW.  My hobbies include CSS/SVG animation and building computers!</p>\n  </div>\n\n  <div class=\"contactInfo\">\n    <h3>Contact Me:</h3>\n    <p>206-850-9388</p>\n    <p>jacobknck@gmail.com</p>\n    <p>github.com/jacobknaack</p>\n  </div>\n\n</main>\n";
 
 /***/ },
 /* 23 */
@@ -37248,7 +37248,7 @@
 				"full": "img/shapesNStuff/fullShot.png",
 				"feature": "img/shapesNStuff/featureShot.png"
 			},
-			"Desc": "An app for the creative at heart! Shapes'nstuff lets a user draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  This work of art can then be saved using an amazon s3 database backend.  A user can also upload an image of their own and draw over it! Once saved to the database, users will able to view the shapes'nstuff gallery with all the projects created using the app.",
+			"Desc": "An app for the creative at heart! Shapes'nStuff lets a user draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  This work of art can then be saved using an amazon s3 database backend.  A user can also upload an image of their own and draw over it! Once saved to the database, users will be able to view the shapes'nStuff gallery with all the projects created using the app.",
 			"Link": "https://github.com/JacobKnaack/DrawingCanvasProject",
 			"appLink": ""
 		}
