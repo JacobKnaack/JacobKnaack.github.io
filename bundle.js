@@ -37226,7 +37226,7 @@
 				"full": "img/shootersLog/fullShot.png",
 				"feature": "img/shootersLog/featureShot.png"
 			},
-			"Desc": "The shooters log is a full stack web application designed for competitive marksmen.  Once a user registers through the applications signup process, they can create and view scorecards formatted to the specifications of a NRA range master.  At the moment this app only tracks competition scrores, but future releases will track data for rifles and rifle loads, as well as real time data visualization of shot accuracy across competitions.  Shooters Log also has an accompanying iOs app for use out at the range.  Built with angularJS and node.",
+			"Desc": "The shooters log is a full stack web application designed for competitive marksmen.  Once a user registers through the applications signup process, they can create and view scorecards formatted to the specifications of a NRA range master.  At the moment this app only tracks competition scores, but future releases will track data for rifles and rifle loads, as well as real time data visualization of shot accuracy across competitions.  Shooters Log also has an accompanying iOs app for use out at the range.  Built with angularJS and node.",
 			"Link": "https://github.com/gsmatth/shooters-log-fe",
 			"appLink": "https://shooters-log-fe-staging.herokuapp.com/#/signin"
 		},
