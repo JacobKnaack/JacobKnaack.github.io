@@ -69,7 +69,9 @@
 	    controller: 'HeadingController',
 	    controllerAs: 'headingCtrl'
 	  }).when('/home', {
-	    redirectTo: '/'
+	    redirectTo: '/',
+	    controller: 'HomeController',
+	    controllerAs: 'homeCtrl'
 	  }).when('/about', {
 	    template: __webpack_require__(22)
 	  }).when('/project', {
@@ -84,12 +86,13 @@
 	// services
 	// controllers
 	__webpack_require__(24);
+	__webpack_require__(33);
 
 	// directives
 	// components
-	__webpack_require__(33);
-	__webpack_require__(40);
+	__webpack_require__(37);
 	__webpack_require__(44);
+	__webpack_require__(48);
 
 /***/ },
 /* 1 */
@@ -37163,7 +37166,7 @@
 /* 23 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"links\">\n    <a ng-hide=\"!portfolioCtrl.displayProject.Link\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\"><img class=\"githubLink\" ng-src=\"{{portfolioCtrl.githubIcon}}\" alt=\"github link\"></a>\n    <a ng-hide=\"!portfolioCtrl.displayProject.appLink\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.appLink}}\"><img class=\"appLink\" ng-src=\"{{portfolioCtrl.applicationIcon}}\" alt=\"link to app\"></a>\n  </div>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\"> {{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n</main>\n";
+	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"links\">\n    <a ng-hide=\"!portfolioCtrl.displayProject.Link\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\"><img class=\"githubLink\" ng-src=\"{{portfolioCtrl.githubIcon}}\" alt=\"github link\"></a>\n    <a ng-hide=\"!portfolioCtrl.displayProject.appLink\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.appLink}}\"><img class=\"appLink\" ng-src=\"{{portfolioCtrl.applicationIcon}}\" alt=\"link to app\"></a>\n  </div>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\">{{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n</main>\n";
 
 /***/ },
 /* 24 */
@@ -37282,27 +37285,11 @@
 
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
-	var $ = __webpack_require__(36);
+	portfolio.controller('HomeController', [HomeController]);
 
-	portfolio.component('appHeading', {
-	  template: __webpack_require__(37),
-	  controller: 'HeadingController',
-	  controllerAs: 'headingCtrl'
-	});
-
-	portfolio.controller('HeadingController', ['$log', HeadingController]);
-
-	function HeadingController($log) {
-	  $log.debug('init HeadingController');
-
-	  this.homeScreen = true;
-	  this.enter = __webpack_require__(38);
-	  this.logo = __webpack_require__(39);
+	function HomeController() {
+	  this.backgroundImg = __webpack_require__(36);
 	}
-
-	$(window).scroll(function () {
-	  $('.app-heading').css('opacity', 1 - $(window).scrollTop() / 100);
-	});
 
 /***/ },
 /* 34 */
@@ -37313,6 +37300,51 @@
 /***/ },
 /* 35 */,
 /* 36 */
+/***/ function(module, exports) {
+
+	module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTgwLjkgNTEwLjYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojYjJiMWExO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDoycHg7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5iYWNrZ3JvdW5kPC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTQ4LjMgMjU1LjYgMjk1LjkgMjU1LjYgMjIyLjEgMzgyLjggMTQ4LjMgNTEwLjMgNzQuNSAzODIuOSAwLjggMjU1LjYgMTQ4LjMgMjU1LjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNDQzLjMgMjU1LjYgNTkwLjkgMjU1LjYgNTE3LjEgMzgyLjggNDQzLjMgNTEwLjMgMzY5LjUgMzgyLjkgMjk1LjggMjU1LjYgNDQzLjMgMjU1LjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNzM4LjMgMjU1LjYgODg1LjkgMjU1LjYgODEyLjEgMzgyLjggNzM4LjMgNTEwLjMgNjY0LjUgMzgyLjkgNTkwLjggMjU1LjYgNzM4LjMgMjU1LjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNDkuMyA1MTAuNiA5OC4xIDUxMC42IDczLjcgNDY4LjMgNDkuMyA0MjYgMjQuOSA0NjguMyAwLjYgNTEwLjYgNDkuMyA1MTAuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIzNDQuMyA1MTAuNiAzOTMuMSA1MTAuNiAzNjguNyA0NjguMyAzNDQuMyA0MjYgMzE5LjkgNDY4LjMgMjk1LjYgNTEwLjYgMzQ0LjMgNTEwLjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNjM5LjMgNTEwLjYgNjg4LjEgNTEwLjYgNjYzLjcgNDY4LjMgNjM5LjMgNDI2IDYxNC45IDQ2OC4zIDU5MC42IDUxMC42IDYzOS4zIDUxMC42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjIwOC4zIDUxMC42IDM1NS45IDUxMC42IDI4Mi4xIDM4My4zIDIwOC4zIDI1NS44IDEzNC41IDM4My4yIDYwLjggNTEwLjYgMjA4LjMgNTEwLjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNTAzLjMgNTEwLjYgNjUwLjkgNTEwLjYgNTc3LjEgMzgzLjMgNTAzLjMgMjU1LjggNDI5LjUgMzgzLjIgMzU1LjggNTEwLjYgNTAzLjMgNTEwLjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNzk4LjMgNTEwLjYgOTQ1LjkgNTEwLjYgODcyLjEgMzgzLjMgNzk4LjMgMjU1LjggNzI0LjUgMzgzLjIgNjUwLjggNTEwLjYgNzk4LjMgNTEwLjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTA5LjMgMjU1LjYgMTU4LjEgMjU1LjYgMTMzLjcgMjk3LjggMTA5LjMgMzQwLjEgODQuOSAyOTcuOCA2MC42IDI1NS42IDEwOS4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjQwNC4zIDI1NS42IDQ1My4xIDI1NS42IDQyOC43IDI5Ny44IDQwNC4zIDM0MC4xIDM3OS45IDI5Ny44IDM1NS42IDI1NS42IDQwNC4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjY5OS4zIDI1NS42IDc0OC4xIDI1NS42IDcyMy43IDI5Ny44IDY5OS4zIDM0MC4xIDY3NC45IDI5Ny44IDY1MC42IDI1NS42IDY5OS4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjE0OC4zIDI1NS42IDI5NS45IDI1NS42IDIyMi4xIDEyOC4zIDE0OC4zIDAuOCA3NC41IDEyOC4yIDAuOCAyNTUuNiAxNDguMyAyNTUuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI0NDMuMyAyNTUuNiA1OTAuOSAyNTUuNiA1MTcuMSAxMjguMyA0NDMuMyAwLjggMzY5LjUgMTI4LjIgMjk1LjggMjU1LjYgNDQzLjMgMjU1LjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNzM4LjMgMjU1LjYgODg1LjkgMjU1LjYgODEyLjEgMTI4LjMgNzM4LjMgMC44IDY2NC41IDEyOC4yIDU5MC44IDI1NS42IDczOC4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjQ5LjMgMC42IDk4LjEgMC42IDczLjcgNDIuOCA0OS4zIDg1LjEgMjQuOSA0Mi44IDAuNiAwLjYgNDkuMyAwLjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMzQ0LjMgMC42IDM5My4xIDAuNiAzNjguNyA0Mi44IDM0NC4zIDg1LjEgMzE5LjkgNDIuOCAyOTUuNiAwLjYgMzQ0LjMgMC42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjYzOS4zIDAuNiA2ODguMSAwLjYgNjYzLjcgNDIuOCA2MzkuMyA4NS4xIDYxNC45IDQyLjggNTkwLjYgMC42IDYzOS4zIDAuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIyMDguMyAwLjYgMzU1LjkgMC42IDI4Mi4xIDEyNy44IDIwOC4zIDI1NS4zIDEzNC41IDEyNy45IDYwLjggMC42IDIwOC4zIDAuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1MDMuMyAwLjYgNjUwLjkgMC42IDU3Ny4xIDEyNy44IDUwMy4zIDI1NS4zIDQyOS41IDEyNy45IDM1NS44IDAuNiA1MDMuMyAwLjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNzk4LjMgMC42IDk0NS45IDAuNiA4NzIuMSAxMjcuOCA3OTguMyAyNTUuMyA3MjQuNSAxMjcuOSA2NTAuOCAwLjYgNzk4LjMgMC42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjEwOS4zIDI1NS42IDE1OC4xIDI1NS42IDEzMy43IDIxMy4zIDEwOS4zIDE3MSA4NC45IDIxMy4zIDYwLjYgMjU1LjYgMTA5LjMgMjU1LjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iNDA0LjMgMjU1LjYgNDUzLjEgMjU1LjYgNDI4LjcgMjEzLjMgNDA0LjMgMTcxIDM3OS45IDIxMy4zIDM1NS42IDI1NS42IDQwNC4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjY5OS4zIDI1NS42IDc0OC4xIDI1NS42IDcyMy43IDIxMy4zIDY5OS4zIDE3MSA2NzQuOSAyMTMuMyA2NTAuNiAyNTUuNiA2OTkuMyAyNTUuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIxMDMzLjMgMjU1LjYgMTE4MC45IDI1NS42IDExMDcuMSAzODIuOCAxMDMzLjMgNTEwLjMgOTU5LjUgMzgyLjkgODg1LjggMjU1LjYgMTAzMy4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjkzNC4zIDUxMC42IDk4My4xIDUxMC42IDk1OC43IDQ2OC4zIDkzNC4zIDQyNiA5MDkuOSA0NjguMyA4ODUuNiA1MTAuNiA5MzQuMyA1MTAuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIxMDkzLjMgNTEwLjYgMTI0MC45IDUxMC42IDExNjcuMSAzODMuMyAxMDkzLjMgMjU1LjggMTAxOS41IDM4My4yIDk0NS44IDUxMC42IDEwOTMuMyA1MTAuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI5OTQuMyAyNTUuNiAxMDQzLjEgMjU1LjYgMTAxOC43IDI5Ny44IDk5NC4zIDM0MC4xIDk2OS45IDI5Ny44IDk0NS42IDI1NS42IDk5NC4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjEwMzMuMyAyNTUuNiAxMTgwLjkgMjU1LjYgMTEwNy4xIDEyOC4zIDEwMzMuMyAwLjggOTU5LjUgMTI4LjIgODg1LjggMjU1LjYgMTAzMy4zIDI1NS42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjkzNC4zIDAuNiA5ODMuMSAwLjYgOTU4LjcgNDIuOCA5MzQuMyA4NS4xIDkwOS45IDQyLjggODg1LjYgMC42IDkzNC4zIDAuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIxMDkzLjMgMC42IDEyNDAuOSAwLjYgMTE2Ny4xIDEyNy44IDEwOTMuMyAyNTUuMyAxMDE5LjUgMTI3LjkgOTQ1LjggMC42IDEwOTMuMyAwLjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iOTk0LjMgMjU1LjYgMTA0My4xIDI1NS42IDEwMTguNyAyMTMuMyA5OTQuMyAxNzEgOTY5LjkgMjEzLjMgOTQ1LjYgMjU1LjYgOTk0LjMgMjU1LjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iLTE0Ni43IDI1NS42IDAuOSAyNTUuNiAtNzIuOSAzODIuOCAtMTQ2LjcgNTEwLjMgLTIyMC41IDM4Mi45IC0yOTQuMiAyNTUuNiAtMTQ2LjcgMjU1LjYiLz48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iLTg2LjcgNTEwLjYgNjAuOSA1MTAuNiAtMTIuOSAzODMuMyAtODYuNyAyNTUuOCAtMTYwLjUgMzgzLjIgLTIzNC4yIDUxMC42IC04Ni43IDUxMC42Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9Ii0xNDYuNyAyNTUuNiAwLjkgMjU1LjYgLTcyLjkgMTI4LjMgLTE0Ni43IDAuOCAtMjIwLjUgMTI4LjIgLTI5NC4yIDI1NS42IC0xNDYuNyAyNTUuNiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSItODYuNyAwLjYgNjAuOSAwLjYgLTEyLjkgMTI3LjggLTg2LjcgMjU1LjMgLTE2MC41IDEyNy45IC0yMzQuMiAwLjYgLTg2LjcgMC42Ii8+PC9zdmc+"
+
+/***/ },
+/* 37 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(38);
+
+	var angular = __webpack_require__(15);
+	var portfolio = angular.module('portfolio');
+	var $ = __webpack_require__(40);
+
+	portfolio.component('appHeading', {
+	  template: __webpack_require__(41),
+	  controller: 'HeadingController',
+	  controllerAs: 'headingCtrl'
+	});
+
+	portfolio.controller('HeadingController', ['$log', HeadingController]);
+
+	function HeadingController($log) {
+	  $log.debug('init HeadingController');
+
+	  this.homeScreen = true;
+	  this.enter = __webpack_require__(42);
+	  this.logo = __webpack_require__(43);
+	}
+
+	$(window).scroll(function () {
+	  $('.app-heading').css('opacity', 1 - $(window).scrollTop() / 100);
+	});
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 39 */,
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -47392,54 +47424,22 @@
 
 
 /***/ },
-/* 37 */
+/* 41 */
 /***/ function(module, exports) {
 
 	module.exports = "<header class=\"app-heading\">\n  <a class=\"entrance\" ng-click=\"$Ctrl.homeScreen = !$Ctrl.homeScreen\" ng-hide=\"$Ctrl.homeScreen\" href=\"#/about\">\n  <div class=\"enter\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 242 216\">\n    <defs>\n      <style>.cls-1{fill:none;stroke-width:3px;}.cls-1,.cls-2{stroke:#ccbc33;stroke-miterlimit:10;}.cls-2{fill:#ff73b2;stroke-width:4px;}.cls-3{fill:#ccbc33;}</style>\n    </defs>\n    <title>enter</title>\n    <g id=\"Frame\">\n      <path class=\"cls-1\" d=\"M154.9,164.4l-67.3,8.1a5,5,0,0,1-5.6-5V48.4a5,5,0,0,1,5.8-4.9l68,11.5a5,5,0,0,1,4.2,5l-.7,99.5A5,5,0,0,1,154.9,164.4Z\"/>\n    </g>\n    <g id=\"Door\">\n      <path class=\"cls-2\" d=\"M152.8, 161.8l-63.2, 7.8a4.7, 4.7, 0, 0, 1-5.3-4.7V51.2a4.7, 4.7, 0, 0, 1, 5.5-4.7l63.8, 11a4.7, 4.7, 0, 0, 1, 3.9, 4.7l-.7, 94.9A4.7, 4.7, 0, 0, 1, 152.8, 161.8Z\"/>\n      <ellipse class=\"cls-3\" cx=\"93\" cy=\"108\" rx=\"3.8\" ry=\"4.7\" transform=\"matrix(1, -0.1, 0.1, 1, -9.93, 9.42)\"/>\n    </g>\n    </svg>\n  </div>\n  </a>\n\n  <div class=\"icons\">\n    <a class=\"logo\" ng-click=\"$Ctrl.homeScreen = !$Ctrl.homeScreen\" href=\"#/home\" ng-if=\"$Ctrl.homeScreen\"><img ng-src=\"{{headingCtrl.logo}}\" alt=\"logo\"></a>\n    <app-nav ng-if=\"$Ctrl.homeScreen\" class=\"nav-exit\"></app-nav>\n  </div>\n</header>\n";
 
 /***/ },
-/* 38 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDIgMjE2Ij4KICA8ZGVmcz4KICAgIDxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZS13aWR0aDozcHg7fS5jbHMtMSwuY2xzLTJ7c3Ryb2tlOiNjY2JjMzM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fS5jbHMtMntmaWxsOiNmZjczYjI7c3Ryb2tlLXdpZHRoOjRweDt9LmNscy0ze2ZpbGw6I2NjYmMzMzt9PC9zdHlsZT4KICA8L2RlZnM+CiAgPHRpdGxlPmVudGVyPC90aXRsZT4KICA8ZyBpZD0iRnJhbWUiPgogICAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTU0LjksMTY0LjRsLTY3LjMsOC4xYTUsNSwwLDAsMS01LjYtNVY0OC40YTUsNSwwLDAsMSw1LjgtNC45bDY4LDExLjVhNSw1LDAsMCwxLDQuMiw1bC0uNyw5OS41QTUsNSwwLDAsMSwxNTQuOSwxNjQuNFoiLz4KICA8L2c+CiAgPGcgaWQ9IkRvb3IiPgogICAgPHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTUyLjgsIDE2MS44bC02My4yLCA3LjhhNC43LCA0LjcsIDAsIDAsIDEtNS4zLTQuN1Y1MS4yYTQuNywgNC43LCAwLCAwLCAxLCA1LjUtNC43bDYzLjgsIDExYTQuNywgNC43LCAwLCAwLCAxLCAzLjksIDQuN2wtLjcsIDk0LjlBNC43LCA0LjcsIDAsIDAsIDEsIDE1Mi44LCAxNjEuOFoiLz4KICAgIDxlbGxpcHNlIGNsYXNzPSJjbHMtMyIgY3g9IjkzIiBjeT0iMTA4IiByeD0iMy44IiByeT0iNC43IiB0cmFuc2Zvcm09Im1hdHJpeCgxLCAtMC4xLCAwLjEsIDEsIC05LjkzLCA5LjQyKSIvPgogIDwvZz4KPC9zdmc+Cg=="
 
 /***/ },
-/* 39 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTcgNDYxIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2NjYmMzMzt9LmNscy0ye2ZpbGw6IzU5ZTdmZjt9LmNscy0yLC5jbHMtM3tvcGFjaXR5OjAuODt9LmNscy0ze2ZpbGw6I2ZmNzNiMjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmxvZ288L3RpdGxlPjxnIGlkPSJMZXR0ZXJzIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMjE5IDM2OCA2Ny4xIDI4MC4zIDIxOSA3MyAyMTkgMzY4Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjI5MSA3MyA0NDIuOSA3MyAyOTEgMzY4IDI5MSA3MyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyOTEgMzY4IDQ0Mi45IDM2OCAyOTEgNzMgMjkxIDM2OCIvPjwvZz48L3N2Zz4="
-
-/***/ },
-/* 40 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	__webpack_require__(41);
-
-	var angular = __webpack_require__(15);
-	var portfolio = angular.module('portfolio');
-
-	portfolio.component('appNav', {
-	  template: __webpack_require__(43)
-	});
-
-	portfolio.controller('NavController', [NavController]);
-
-	function NavController() {}
-
-/***/ },
-/* 41 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 42 */,
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<nav class=\"app-nav\">\n  <ul class=\"tabs\">\n    <li>\n      <a href=\"#/project\"> My Work </a>\n    </li>\n    <li>\n      <a href=\"#/about\"> About Me </a>\n    </li>\n  </ul>\n</nav>\n";
+	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTcgNDYxIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2NjYmMzMzt9LmNscy0ye2ZpbGw6IzU5ZTdmZjt9LmNscy0yLC5jbHMtM3tvcGFjaXR5OjAuODt9LmNscy0ze2ZpbGw6I2ZmNzNiMjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmxvZ288L3RpdGxlPjxnIGlkPSJMZXR0ZXJzIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMjE5IDM2OCA2Ny4xIDI4MC4zIDIxOSA3MyAyMTkgMzY4Ii8+PHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjI5MSA3MyA0NDIuOSA3MyAyOTEgMzY4IDI5MSA3MyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyOTEgMzY4IDQ0Mi45IDM2OCAyOTEgNzMgMjkxIDM2OCIvPjwvZz48L3N2Zz4="
 
 /***/ },
 /* 44 */
@@ -47452,9 +47452,13 @@
 	var angular = __webpack_require__(15);
 	var portfolio = angular.module('portfolio');
 
-	portfolio.component('appFooter', {
+	portfolio.component('appNav', {
 	  template: __webpack_require__(47)
 	});
+
+	portfolio.controller('NavController', [NavController]);
+
+	function NavController() {}
 
 /***/ },
 /* 45 */
@@ -47465,6 +47469,34 @@
 /***/ },
 /* 46 */,
 /* 47 */
+/***/ function(module, exports) {
+
+	module.exports = "<nav class=\"app-nav\">\n  <ul class=\"tabs\">\n    <li>\n      <a href=\"#/project\"> My Work </a>\n    </li>\n    <li>\n      <a href=\"#/about\"> About Me </a>\n    </li>\n  </ul>\n</nav>\n";
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	__webpack_require__(49);
+
+	var angular = __webpack_require__(15);
+	var portfolio = angular.module('portfolio');
+
+	portfolio.component('appFooter', {
+	  template: __webpack_require__(51)
+	});
+
+/***/ },
+/* 49 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 50 */,
+/* 51 */
 /***/ function(module, exports) {
 
 	module.exports = "<footer class=\"appFooter\">\n  <p>&copy Jacob Knaack 2016</p>\n</footer>\n";
