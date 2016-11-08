@@ -37266,7 +37266,7 @@
 				"bullet1": "Features an amazon s3 database for image storage, and jQuery / easelJS on the front end",
 				"bullet2": "Can upload images onto HTML canvas for editting.",
 				"bullet3": "Features an image gallery where users can browse images created by other users and edit them.",
-				"bullet4": "Nest iteration will have additional shapes and animations."
+				"bullet4": "Next iteration will have additional shapes and animations."
 			},
 			"Link": "https://github.com/JacobKnaack/DrawingCanvasProject",
 			"appLink": ""
