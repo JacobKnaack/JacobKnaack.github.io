@@ -25,6 +25,8 @@ html, body {
     font-family: "master-of-break"; }
   .pageContent p {
     font-family: "walkway"; }
+  .pageContent li {
+    font-family: 'walkway'; }
   .pageContent .appAbout {
     padding-bottom: 5vh; }
     .pageContent .appAbout .contactInfo {
@@ -130,6 +132,13 @@ html, body {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; } }
+    .appProject .projectInfo .bulletList {
+      list-style-type: circle;
+      padding: 0;
+      font-size: 1.2em; }
+      .appProject .projectInfo .bulletList li {
+        line-height: 125%;
+        margin: 30px; }
     .appProject .projectInfo .projectText {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -150,7 +159,7 @@ html, body {
           font-size: 0.9em;
           margin: 2vh auto 2vh auto; } }
     .appProject .projectInfo .gallery {
-      margin-top: 2vh;
+      margin-top: 10vh;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -158,6 +167,9 @@ html, body {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
+      @media (max-width: 500px) {
+        .appProject .projectInfo .gallery {
+          margin-top: 0; } }
       .appProject .projectInfo .gallery .screenshot {
         max-width: 40vw;
         max-height: 50vh;
@@ -204,6 +216,9 @@ html, body {
       .badges img {
         width: 8vw;
         height: 8vh; } }
+  @media (max-width: 500px) {
+    .badges {
+      width: 40vw; } }
 .app-heading {
   position: fixed;
   z-index: 100;

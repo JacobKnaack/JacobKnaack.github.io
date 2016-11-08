@@ -37158,13 +37158,13 @@
 /* 22 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appAbout\">\n\n  <div class=\"text\">\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Hi! I'm Jacob and I am a full stack web developer</strong><br>I program both backend databases as well as frontend user interfaces for web browsers.  I also create my own custom artwork and animations.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">The Browser is My Sandbox.</strong><br> With it I make interactive and fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling design.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Digital Interaction and Communication are my passion</strong><br> Using technology to make life more enjoyable is my goal.  Today's tools should be easy to interact with and have a clear central purpose.  Everyday I strive to create simple user friendly solutions that are fun to use.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">My Skill Set is Broad</strong><br> I have studied Computer Science as well as earned a degree in Psychology and Linguistics from the University of Washington.  I'm a certified JavaScript developer from Code Fellows and earned a certificate in technical communication from the UW.  My hobbies include CSS/SVG animation and building computers!</p>\n  </div>\n\n  <div class=\"contactInfo\">\n    <h3>Contact Me:</h3>\n    <p>206-850-9388</p>\n    <p>jacobknck@gmail.com</p>\n    <p>github.com/jacobknaack</p>\n  </div>\n\n</main>\n";
+	module.exports = "<main class=\"appAbout\">\n\n  <div class=\"text\">\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Hi! I'm Jacob and I am a full stack web developer</strong><br>I program both backend databases as well as frontend user interfaces for web browsers.  I also create my own custom artwork and animations.  Currently I am a teaching assistant at Code Fellows Seattle Campus.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">The Browser is My Sandbox.</strong><br> With it I make interactive and fully functional web applications.  Applications that solve real world problems, while also providing a seamless user experience and compelling design.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">Digital Interaction and Communication are my passion</strong><br> Using technology to make life more enjoyable is my goal.  Today's tools should be easy to interact with and have a clear central purpose.  Everyday I strive to create simple user friendly solutions that are fun to use.</p>\n    <p class=\"aboutText\"><strong style=\"border-bottom: thin solid grey;\">My Skill Set is Broad</strong><br> I have studied Computer Science as well as earned a degree in Psychology and Linguistics from the University of Washington.  I'm a certified JavaScript developer from Code Fellows and earned a certificate in technical communication from the UW.  My hobbies include CSS/SVG animation and building computers!</p>\n  </div>\n\n  <div class=\"contactInfo\">\n    <h3>Contact Me:</h3>\n    <p>206-850-9388</p>\n    <p>jacobknck@gmail.com</p>\n    <p>github.com/jacobknaack</p>\n  </div>\n\n</main>\n";
 
 /***/ },
 /* 23 */
 /***/ function(module, exports) {
 
-	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"links\">\n    <a ng-hide=\"!portfolioCtrl.displayProject.Link\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\"><img class=\"githubLink\" ng-src=\"{{portfolioCtrl.githubIcon}}\" alt=\"github link\"></a>\n    <a ng-hide=\"!portfolioCtrl.displayProject.appLink\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.appLink}}\"><img class=\"appLink\" ng-src=\"{{portfolioCtrl.applicationIcon}}\" alt=\"link to app\"></a>\n  </div>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\">{{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n</main>\n";
+	module.exports = "<main class=\"appProject\">\n  <ul class=\"listSelect\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShootersLog)\" ng-src=\"{{portfolioCtrl.titles.shootersLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.MileageLog)\" ng-src=\"{{portfolioCtrl.titles.mileageLog}}\">\n    <img class=\"titlePic\" ng-click=\"portfolioCtrl.selectProject(portfolioCtrl.projects.ShapesNStuff)\" ng-src=\"{{portfolioCtrl.titles.shapesNStuff}}\">\n  </ul>\n\n  <h2 class=\"title\">{{portfolioCtrl.displayProject.Title}}</h2>\n\n  <div class=\"links\">\n    <a ng-hide=\"!portfolioCtrl.displayProject.Link\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.Link}}\"><img class=\"githubLink\" ng-src=\"{{portfolioCtrl.githubIcon}}\" alt=\"github link\"></a>\n    <a ng-hide=\"!portfolioCtrl.displayProject.appLink\" target=\"_blank\" href=\"{{portfolioCtrl.displayProject.appLink}}\"><img class=\"appLink\" ng-src=\"{{portfolioCtrl.applicationIcon}}\" alt=\"link to app\"></a>\n  </div>\n\n  <div class=\"projectInfo\">\n    <div class=\"projectText\">\n      <h3 class=\"dateCompleted\">{{portfolioCtrl.displayProject.DateCompleted}}</h3>\n      <p class=\"desc\">{{portfolioCtrl.displayProject.Desc}}</p>\n      <ul class=\"bulletList\">\n        <li ng-repeat=\"bullets in portfolioCtrl.displayProject.Bullets\">{{bullets}}</li>\n      </ul>\n    </div>\n\n    <div class=\"gallery\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.full}}\" alt=\"full project screenshot\">\n      <img class=\"screenshot\" ng-hide=\"!portfolioCtrl.displayProject.Images\" ng-src=\"{{portfolioCtrl.displayProject.Images.feature}}\" alt=\"feature project screenshot\">\n    </div>\n  </div>\n</main>\n";
 
 /***/ },
 /* 24 */
@@ -37222,12 +37222,18 @@
 	module.exports = {
 		"ShootersLog": {
 			"Title": "Shooters Log",
-			"DateCompleted": "September 2016",
+			"DateCompleted": "November 2016",
 			"Images": {
 				"full": "img/shootersLog/fullShot.png",
 				"feature": "img/shootersLog/featureShot.png"
 			},
-			"Desc": "The shooters log is a full stack web application designed for competitive marksmen.  Once a user registers through the applications signup process, they can create and view scorecards formatted to the specifications of a NRA range master.  At the moment this app only tracks competition scores, but future releases will track data for rifles and rifle loads, as well as real time data visualization of shot accuracy across competitions.  Shooters Log also has an accompanying iOs app for use out at the range.  Built with angularJS and node.",
+			"Desc": "A Web application designed to track data for competitve marksmen.  No more pen and paper book keeping for scorecards, load books, or rifle books.  Shooters Log lets you quickly input and store your information and retrieve it quickly to submit to range masters and track your progress as a marksmen.",
+			"Bullets": {
+				"bullet1": "Features a nodeJS backend built with express and mongoDB, and a front end built with angularJS.",
+				"bullet2": "All information formatted to the specifications of current NRA standards.",
+				"bullet3": "Has an accompanying iOS app for easier use at the range, built with swift3 and objective C.",
+				"bullet4": "Current release tracks scores for shooting competitions, next release will track load and rifle data."
+			},
 			"Link": "https://github.com/gsmatth/shooters-log-fe",
 			"appLink": "https://shooters-log-fe-staging.herokuapp.com/#/signin"
 		},
@@ -37238,7 +37244,13 @@
 				"full": "img/mileageLog/fullShot.png",
 				"feature": "img/mileageLog/featureShot.png"
 			},
-			"Desc": "This app is a service for people tracking their miles traveled in a trip. It uses geolocation provided by google maps to track the user and JavaScript to calculate the distance from the starting location and the location where the user ends their trip.  Made for truck drivers, couriers, and ride sharers that need to keep track of their miles for tax purposes or simply tracking their distance traveled.",
+			"Desc": "A web application to track your mileage.  If you work in an indistry that requires you to keep a log of mileage travelled while on the job, this app is a time saver.",
+			"Bullets": {
+				"Bullet1": "Built with nodeJS on the backend and Google Maps API and jQuery on the front end. (being updated to angularJS).",
+				"Bullet2": "Keeps a log of your trips and the mileage travelled.",
+				"Bullet3": "Exportable CSV file format to easily input mileage information into spreadsheet applications.",
+				"Bullet4": "Designed for small screens and mobile devices."
+			},
 			"Link": "https://github.com/JacobKnaack/Mileage-Tracker",
 			"appLink": ""
 		},
@@ -37249,7 +37261,13 @@
 				"full": "img/shapesNStuff/fullShot.png",
 				"feature": "img/shapesNStuff/featureShot.png"
 			},
-			"Desc": "An app for the creative at heart! Shapes'nStuff lets a user draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.  This work of art can then be saved using an amazon s3 database backend.  A user can also upload an image of their own and draw over it! Once saved to the database, users will be able to view the shapes'nStuff gallery with all the projects created using the app.",
+			"Desc": "An app for the creative at heart! Shapes'nStuff lets a user draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.",
+			"Bullets": {
+				"bullet1": "Features an amazon s3 database for image storage, and jQuery / easelJS on the front end",
+				"bullet2": "Can upload images onto HTML canvas for editting.",
+				"bullet3": "Features an image gallery where users can browse images created by other users and edit them.",
+				"bullet4": "Nest iteration will have additional shapes and animations."
+			},
 			"Link": "https://github.com/JacobKnaack/DrawingCanvasProject",
 			"appLink": ""
 		}
