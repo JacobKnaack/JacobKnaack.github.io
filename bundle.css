@@ -214,7 +214,8 @@ html, body {
     border-bottom: none; }
   @media (max-width: 500px) {
     .text .aboutText {
-      font-size: 0.7em; }
+      font-size: 0.7em;
+      height: 110vh; }
       .text .aboutText p {
         width: 80vw; } }
 
