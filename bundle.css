@@ -182,11 +182,8 @@ html, body {
 #mySelf {
   height: 20vh; }
 
-.text .moreRoom {
-  margin-bottom: 30vh; }
-
 .text .aboutText {
-  height: 80vh; }
+  margin-bottom: 20vh; }
   .text .aboutText img {
     height: 10vh; }
   .text .aboutText .aboutBullets {
@@ -212,10 +209,9 @@ html, body {
     margin: 5vh auto 5vh auto;
     text-align: center;
     border-bottom: none; }
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     .text .aboutText {
-      font-size: 0.7em;
-      height: 110vh; }
+      font-size: 0.8em; }
       .text .aboutText p {
         width: 80vw; } }
 
