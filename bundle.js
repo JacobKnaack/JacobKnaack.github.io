@@ -37233,8 +37233,8 @@
 			"Title": "Shooters Log",
 			"DateCompleted": "November 2016",
 			"Images": {
-				"full": "app/scss/lib/asset/screenshot/shootersLog/fullShot.png",
-				"feature": "app/scss/lib/asset/screenshot/shootersLog/featureShot.png"
+				"full": "img/shootersLog/fullShot.png",
+				"feature": "img/shootersLog/featureShot.png"
 			},
 			"Desc": "A Web application designed to track data for competitve marksmen.  No more pen and paper book keeping for scorecards, load books, or rifle books.  Shooters Log lets you quickly input and store your information and retrieve it quickly to submit to range masters and track your progress as a marksmen.",
 			"Bullets": {
@@ -37250,8 +37250,8 @@
 			"Title": "Mileage Log",
 			"DateCompleted": "December 2016",
 			"Images": {
-				"full": "app/scss/lib/asset/screenshot/mileageLog/fullShot.png",
-				"feature": "app/scss/lib/asset/screenshot/mileageLog/featureShot.png"
+				"full": "img/mileageLog/fullShot.png",
+				"feature": "img/mileageLog/featureShot.png"
 			},
 			"Desc": "A web application to track your mileage.  If you work in an industry that requires you to keep a log of mileage travelled while on the job, this app is a time saver.",
 			"Bullets": {
@@ -37267,8 +37267,8 @@
 			"Title": "Shapes'n Stuff",
 			"DateCompleted": "March 2016",
 			"Images": {
-				"full": "app/scss/lib/asset/screenshot/shapesNStuff/fullShot.png",
-				"feature": "app/scss/lib/asset/screenshot/shapesNStuff/featureShot.png"
+				"full": "img/shapesNStuff/fullShot.png",
+				"feature": "img/shapesNStuff/featureShot.png"
 			},
 			"Desc": "An app for the creative at heart! Shapes'nStuff lets a user draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.",
 			"Bullets": {
