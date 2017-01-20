@@ -37233,8 +37233,8 @@
 			"Title": "Shooters Log",
 			"DateCompleted": "November 2016",
 			"Images": {
-				"full": "img/shootersLog/fullShot.png",
-				"feature": "img/shootersLog/featureShot.png"
+				"full": "app/scss/lib/asset/screenshot/shootersLog/fullShot.png",
+				"feature": "app/scss/lib/asset/screenshot/shootersLog/featureShot.png"
 			},
 			"Desc": "A Web application designed to track data for competitve marksmen.  No more pen and paper book keeping for scorecards, load books, or rifle books.  Shooters Log lets you quickly input and store your information and retrieve it quickly to submit to range masters and track your progress as a marksmen.",
 			"Bullets": {
@@ -37250,8 +37250,8 @@
 			"Title": "Mileage Log",
 			"DateCompleted": "December 2016",
 			"Images": {
-				"full": "img/mileageLog/fullShot.png",
-				"feature": "img/mileageLog/featureShot.png"
+				"full": "app/scss/lib/asset/screenshot/mileageLog/fullShot.png",
+				"feature": "app/scss/lib/asset/screenshot/mileageLog/featureShot.png"
 			},
 			"Desc": "A web application to track your mileage.  If you work in an industry that requires you to keep a log of mileage travelled while on the job, this app is a time saver.",
 			"Bullets": {
@@ -37267,8 +37267,8 @@
 			"Title": "Shapes'n Stuff",
 			"DateCompleted": "March 2016",
 			"Images": {
-				"full": "img/shapesNStuff/fullShot.png",
-				"feature": "img/shapesNStuff/featureShot.png"
+				"full": "app/scss/lib/asset/screenshot/shapesNStuff/fullShot.png",
+				"feature": "app/scss/lib/asset/screenshot/shapesNStuff/featureShot.png"
 			},
 			"Desc": "An app for the creative at heart! Shapes'nStuff lets a user draw shapes and lines on the html canvas leverging the power of the easelJS drawing API.",
 			"Bullets": {
@@ -37400,9 +37400,9 @@
 
 /***/ },
 /* 51 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAuOCA1MTcuNSI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiNjYmJmYTg7fS5jbHMtMntmaWxsOiM2ZjdiODQ7fS5jbHMtM3tmaWxsOiM3ZDdmN2Y7fS5jbHMtNHtmaWxsOiM0OTUzNjE7fS5jbHMtNSwuY2xzLTd7Zm9udC1zaXplOjI5cHg7fS5jbHMtNXtmaWxsOiNjYzlhMjk7Zm9udC1mYW1pbHk6TWFzdGVyT2ZCcmVhaywgTWFzdGVyIE9mIEJyZWFrO30uY2xzLTZ7ZmlsbDojYWRmZmU0O30uY2xzLTd7c3Ryb2tlOiNkOTY2ZmY7c3Ryb2tlLW1pdGVybGltaXQ6MTA7Zm9udC1mYW1pbHk6QW5kZXJzLCBBbmRlcnM7fS5jbHMtOHtsZXR0ZXItc3BhY2luZzowLjAyZW07fS5jbHMtOXtsZXR0ZXItc3BhY2luZzotMC4wN2VtO30uY2xzLTEwe2xldHRlci1zcGFjaW5nOi0wLjAyZW07fS5jbHMtMTF7ZmlsbDojZmRmYmU2O30uY2xzLTEye2ZpbGw6I2NjYmMzMzt9LmNscy0xM3tmaWxsOiM1OWU3ZmY7fS5jbHMtMTR7ZmlsbDojZmY3M2IyO29wYWNpdHk6MC44O30uY2xzLTE1e2ZpbGw6I2M3Y2NjYTt9LmNscy0xNntmb250LXNpemU6MjZweDtmaWxsOiM0Yzg3ZmY7Zm9udC1mYW1pbHk6VWJ1bnR1TW9uby1SZWd1bGFyLCBVYnVudHUgTW9ubzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkludGVyYWN0aW9uLWNoYXJ0PC90aXRsZT48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMjM2IDk3LjcgNDY0LjcgMjguNCA0MTAuMyAyNjEuMSAzNTUuOSA0OTMuOCAxODEuNiAzMzAuNCA3LjMgMTY3IDIzNiA5Ny43Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjczLjUsMjg0LjlhNTUuNiw1NS42LDAsMCwxLTUuOSwyMy4xaDQxLjNhNTUuNiw1NS42LDAsMCwxLTUuOS0yMy4xIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTMiIGN4PSI0MzAuMyIgY3k9Ijg3LjUiIHI9Ijg0Ii8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSIyMzEuNCIgeT0iMTI4LjMiIHdpZHRoPSIxMTguNSIgaGVpZ2h0PSIxOTQuNzkiIHJ4PSI2LjQiIHJ5PSI2LjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY1IDUxNi40KSByb3RhdGUoLTkwKSIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeD0iMjQxIiB5PSIxMjgiIHdpZHRoPSI5OS4zIiBoZWlnaHQ9IjE4NC43OSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzAuMyA1MTEuMSkgcm90YXRlKC05MCkiLz48dGV4dCBjbGFzcz0iY2xzLTUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM2NC45IDk3LjkpIj5Qc3ljaG9sb2d5PC90ZXh0PjxjaXJjbGUgY2xhc3M9ImNscy02IiBjeD0iMzQxLjEiIGN5PSI0MTQiIHI9Ijg0Ii8+PHRleHQgY2xhc3M9ImNscy03IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyODMuNSA0MjYuMikiPjx0c3BhbiBjbGFzcz0iY2xzLTgiPkQ8L3RzcGFuPjx0c3BhbiBjbGFzcz0iY2xzLTkiIHg9IjI0LjEiIHk9IjAiPmU8L3RzcGFuPjx0c3BhbiB4PSI0MS4yIiB5PSIwIj5zPC90c3Bhbj48dHNwYW4gY2xhc3M9ImNscy0xMCIgeD0iNjAiIHk9IjAiPmk8L3RzcGFuPjx0c3BhbiB4PSI2Ni4xIiB5PSIwIj5nbjwvdHNwYW4+PC90ZXh0PjxwYXRoIGNsYXNzPSJjbHMtMTEiIGQ9Ik0yOTEsMTgyaDUuOGEwLDAsMCwwLDEsMCwwVjM3Ni44YTAsMCwwLDAsMSwwLDBIMjkxYTYuNCw2LjQsMCwwLDEtNi40LTYuNHYtMTgyQTYuNCw2LjQsMCwwLDEsMjkxLDE4MloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDExLjMgNTcwLjEpIHJvdGF0ZSgtOTApIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTQiIGN4PSIyOTAuNyIgY3k9IjI3OS40IiByPSIyLjEiLz48cG9seWxpbmUgY2xhc3M9ImNscy0xMiIgcG9pbnRzPSIyNTAuOCAyMTguNyAyNzguOSAxODAuNCAyNzguOSAyMzQuOSAyNTAuOCAyMTguNyIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMTMiIHBvaW50cz0iMjkyLjIgMTgwLjQgMzIwLjQgMTgwLjQgMjkyLjIgMjM0LjkgMjkyLjIgMTgwLjQiLz48cG9seWdvbiBjbGFzcz0iY2xzLTE0IiBwb2ludHM9IjI5Mi4yIDIzNC45IDMyMC40IDIzNC45IDI5Mi4yIDE4MC40IDI5Mi4yIDIzNC45Ii8+PGNpcmNsZSBjbGFzcz0iY2xzLTE1IiBjeD0iODkuMyIgY3k9IjE4Ny44IiByPSI4NCIvPjx0ZXh0IGNsYXNzPSJjbHMtMTYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4LjkgMTk1LjgpIj5Qcm9ncmFtbWluZzwvdGV4dD48L3N2Zz4="
+	module.exports = __webpack_require__.p + "fonts/interaction-chart.svg";
 
 /***/ },
 /* 52 */
