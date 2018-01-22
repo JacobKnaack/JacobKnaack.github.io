@@ -1,12 +1,7 @@
 # Portfolio by Jacob Knaack
-Portfolio currently in progress:
+Deployed Portfolio repo:
 
-This is the repository for my github portfolio.
-
-* Currently this just contains mostly scaffolding.
-* home page mostly complete, fonts added and working
-* only uses build files output by webpack
-* In the process of putting together projects page and info about me(Jacob). 
+* 1/21/2018 Angular 4 portfolio. 
 
 
 
