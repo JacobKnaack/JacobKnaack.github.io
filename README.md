@@ -1,7 +1,17 @@
-# Portfolio by Jacob Knaack
-Deployed Portfolio repo:
+# Jacob Knaack
 
-* 1/21/2018 Angular 4 portfolio. 
+## Developer
+
+I'm a Full Stack Web Developer, which means I program Web Services and Interfaces.  I love collaborating on open source projects, and helping small teams squash bugs and implement fun and useful features, at any layer of their tech stack.
+
+## Instructor
+
+I'm love helping others.  I support Bootcamp students transtitioning from other industries into tech.  I also mentor and tutor current working professionals to level up their tech skills and achieve their goals.
+
+## Technical Communicator
+
+I'm an avid writer of documentation and content that helps others solve problems and communicate solutions.  
+
 
 
 
