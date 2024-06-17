@@ -1,0 +1,31 @@
+#Contact {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-link {
+  margin: 0 10px;
+}
+
+.contact-link img {
+  width: 30px;
+}
+
+.contact-link img:hover {
+  transform: scale(1.2);
+}
+

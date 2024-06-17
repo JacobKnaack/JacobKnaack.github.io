@@ -1,0 +1,32 @@
+#Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#Header .column {
+  justify-content: center;
+  align-items: flex-start;
+  width: 30%;
+  min-width: 350px;
+}
+
+#welcome {
+  font-size: 30px;
+}
+#introduction {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1200px) {
+  #Header {
+    flex-direction: column;
+  }
+  #Header .column {
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}

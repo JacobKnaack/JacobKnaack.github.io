@@ -1,0 +1,80 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  /* Adjust width as needed */
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+
+  /* Ensure the card takes the full space of its container */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #333;
+}
+.project-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+.project-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.project-header img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.project-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.project-details {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.project-data {
+  margin: 0;
+}
+.project-description {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: #666;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 1280px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 0.4fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .project-grid {
+      grid-template-columns: 0.9fr;
+    }
+}

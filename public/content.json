@@ -1,0 +1,64 @@
+{
+  "title": "Jacob Knaack",
+  "welcome_message": "You made it!",
+  "introduction": "My name is Jacob.",
+  "profile_statement": "I am a Software Engineer, Educator, and Curriculum Developer.  How can I help you today?",
+  "about_description": ["I build web services and teach software development in the Seattle Area.", "I enjoy working with clients to create products that are exciting, and unique, while efficiently solving real world problems.", "I have a diverse background in Psychology, Research, Education, Software and Computer Science."],
+  "service_description": ["Here's what I can do for you."],
+  "services": [{
+      "name": "Web Services",
+      "description": "I build web services that are custom to your requirements.  Everything from User Interfaces on Desktop, Mobile, and Web Browser, all the way to micro and monolithic server software."
+    },{
+      "name": "Education",
+      "description": "I train individuals young and old in a wide range of skills. Skills like Programming and Engineering fundamentals, Data Structures and Algorithms, Web Development and Career Prep."
+    },{
+      "name": "Product Development",
+      "description": "I assist teams in planning and implementing solutions for potential customers. I work directly with customers and stakeholders to understand problems and requirements to produce great products."
+  }],
+  "project_description": ["Recent Projects I have contributed to."],
+  "experience_description": ["My most recent work."],
+  "experiences": [
+    {
+      "dates": {
+        "start": "2019",
+        "end": "2024"
+      },
+      "title": "Lead Instructor / Curriculum Developer",
+      "company": "Code Fellows",
+      "description": "Taught Web Development and Software Engineering to job seekers.  Created and maintained licensed curriculum from basic to advanced engineering."
+    },
+    {
+      "dates": {
+        "start": "2020",
+        "end": "2021"
+      },
+      "title": "Software Developer",
+      "company": "Strive",
+      "description": "Assisted product team in developing their mobile app.  Worked with hardware engineers and designers to engineer services and interfaces for wearable technologies."
+    }, {
+      "dates": {
+        "start": "2018",
+        "end": "2019"
+      },
+      "title": "Platform Evangelist",
+      "company": "Cosmic JS",
+      "description": "Building apps to run on the Cosmic JS platform. Create content to evangelize products produced by Cosmic JS."
+    }, {
+      "dates": {
+        "start": "2016",
+        "end": "2019"
+      },
+      "title": "Software Engineer",
+      "company": "BluOrbit",
+      "description": "Working with small businesses to build and maintain software solutions for a wide range of needs."
+    }
+  ],
+  "contact_description": ["Let's connect!  If there is something I can help you with, please reach out."],
+  "contact_info": {
+    "location": "Seattle, WA",
+    "phone": "2068509388",
+    "email": "jacobknck@gmail.com",
+    "github": "jacobknaack",
+    "linkedIn": "jacobknaack"
+  }
+}
