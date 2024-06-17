@@ -1,0 +1,17 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Computer 1 -->
+  <rect x="20" y="20" width="50" height="30" fill="#4F4F4F" stroke="#333333" stroke-width="2"/>
+  <rect x="30" y="50" width="30" height="10" fill="#4F4F4F" stroke="#333333" stroke-width="2"/>
+
+  <!-- Computer 2 -->
+  <rect x="130" y="20" width="50" height="30" fill="#4F4F4F" stroke="#333333" stroke-width="2"/>
+  <rect x="140" y="50" width="30" height="10" fill="#4F4F4F" stroke="#333333" stroke-width="2"/>
+
+  <!-- Computer 3 -->
+  <rect x="75" y="100" width="50" height="30" fill="#4F4F4F" stroke="#333333" stroke-width="2"/>
+  <rect x="85" y="130" width="30" height="10" fill="#4F4F4F" stroke="#333333" stroke-width="2"/>
+
+  <!-- Cables -->
+  <line x1="45" y1="50" x2="100" y2="100" stroke="#333333" stroke-width="2"/>
+  <line x1="155" y1="50" x2="100" y2="100" stroke="#333333" stroke-width="2"/>
+</svg>
