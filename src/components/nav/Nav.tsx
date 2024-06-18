@@ -22,7 +22,7 @@ export default function Nav({ title, items }: NavProps): React.ReactElement {
     <div id="nav-container">
       <div id="nav-content">
         <h1 id="nav-title" className="display">{title}</h1>
-        <button onClick={handleModalNav} className="modal-button">&#9776;</button>
+        <button onClick={handleModalNav} className="modal-button primary dark">&#9776;</button>
         <div className={`modal-background ${modalNavActive ? 'active' : ''}`} onClick={handleModalNav}></div>
         <nav className="nav-items">
           <ul className={`nav-item-list ${!modalNavActive ? 'hidden' : ''}`}>

@@ -72,9 +72,12 @@ img {
   main {
     width: 100vw;
   }
-    .header-image {
-      width: 80vw;
-    }
+  .header-image {
+    width: 80vw;
+  }
+  .header-hero {
+    width: 90vw;
+  }
 }
 
 @media (max-width: 400px) {
@@ -83,9 +86,5 @@ img {
   }
   .section-header {
     max-width: 90vw;
-  }
-    
-  .header-hero {
-    width: 100%;
   }
 }
