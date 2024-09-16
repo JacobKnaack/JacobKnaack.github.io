@@ -1,7 +1,15 @@
 {
   "repositories": [
     {
-      "name": "gatsbyjs/gatsby ",
+      "name": "Pucksports-Mobile",
+      "description": "Mobile Client for the Pucksports platform: https://pucksports.com",
+      "language": "JavaScript",
+      "visibility": "private",
+      "stars": null,
+      "forks": null
+    },
+    {
+      "name": "gatsbyjs/gatsby",
       "description": "The best React-based framework with performance, scalability and security built in.",
       "language": "JavaScript",
       "visibility": "public",
