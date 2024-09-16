@@ -12,19 +12,38 @@ export type Message = {
   text: string;
 }
 
+export interface MessageContextType {
+  profile: UserProfile | null;
+  hasSubmitted: boolean;
+  handleProfile: (email: string) => void;
+  handleMessageSubmit: (message: string) => Promise<void>;
+  loadUser: () => void;
+}
+
 export const loadUser = (): UserProfile => {
-  const userString = localStorage.getItem('user_profile');
-  if (userString) {
-    const userJSON = JSON.parse(userString);
-    return userJSON;
-  } else {
-    return { email: "" };
+  try {
+    const userString = localStorage.getItem('user_profile');
+    if (userString) {
+      const userJSON = JSON.parse(userString);
+      return userJSON;
+    } else {
+      return { email: "" };
+    }
+  } catch (e) {
+    console.error('load user error', e);
+    throw new Error('LOAD USER ERROR: unable to load user profile');
   }
 }
 
-export const saveUser = (userProfile: UserProfile): void => {
-  const json = JSON.stringify(userProfile);
-  localStorage.setItem('use_profile', json);
+export const saveUser = (userProfile: UserProfile): UserProfile => {
+  try {
+    const json = JSON.stringify(userProfile);
+    localStorage.setItem('user_profile', json);
+    return userProfile;
+  } catch (e) {
+    console.error('save user error', e);
+    throw new Error('Unable to save user Profile');
+  }
 }
 
 export const sendMessage = async ({ user, text }: Message) => {
@@ -37,11 +56,18 @@ export const sendMessage = async ({ user, text }: Message) => {
       },
       body: JSON.stringify({ email: user, text }),
     });
-    console.log('REQUEST SUCCESS!', response.status);
-  } catch (e) {
-    console.log("REQUEST FAILED", e);
+    return { status: response.status, message: 'OKAY' };
+  } catch (e: unknown) {
+    console.error(e);
+    throw new Error('SEND MESSAGE ERROR:Unable to send message to message service');
   }
 }
 
 
-export const MessageContext = createContext({ email: '' });
+export const MessageContext = createContext<MessageContextType>({
+  loadUser: () => {},
+  profile: { email: '' },
+  hasSubmitted: false,
+  handleProfile: () => false,
+  handleMessageSubmit: async () => {}
+});
