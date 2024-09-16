@@ -1,14 +1,15 @@
+import './contact.css';
 import { useContext } from 'react';
 import { ContentContext } from '../../context/content/ContentContext';
 import GhIcon from '../../assets/github.svg';
 import LiIcon from '../../assets/linkedin.svg';
-import './contact.css'
+import ContactForm from './ContactForm';
 
 export default function Contact() {
 
   const content = useContext(ContentContext);
 
-  function formatPhoneNumber(phoneNumber: string): string {
+  const formatPhoneNumber = (phoneNumber: string): string => {
     // Remove all non-digit characters
     const cleaned = ('' + phoneNumber).replace(/\D/g, '');
 
@@ -16,6 +17,13 @@ export default function Contact() {
     const formattedNumber = `+1(${cleaned.substring(0, 3)})-${cleaned.substring(3, 6)}-${cleaned.substring(6, 10)}`;
 
     return formattedNumber;
+  }  
+
+  const onSubmit = (email: string, text: string) => {
+    console.log(email, text);
+  }
+  const onError = (error: {error: string}) => {
+    console.log('ERROR OCCURRED', error);
   }
 
   return (
@@ -38,6 +46,7 @@ export default function Contact() {
             <img src={LiIcon}/>
           </a>
         </div>
+        <ContactForm onSubmit={onSubmit} canSubmit={true} onError={onError} />
       </div>
     </section>
   )
