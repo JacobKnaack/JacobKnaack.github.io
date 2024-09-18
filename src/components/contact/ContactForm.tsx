@@ -39,15 +39,22 @@ const ContactForm = () => {
     }
   }, [profile]);
 
+  const handleFormError = (message: string) => {
+    setError(message);
+    setTimeout(() => {
+      setError('');
+    }, 3000);
+  }
+
   const validateMessage = (input: string) => {
     const trimmedMessage = input.trim();
 
     if (trimmedMessage === '') {
-      setError('message must not be empty');
+      handleFormError('message must not be empty');
       return false;
     }
     if (trimmedMessage.length > 500) {
-      setError('Message must be less than 500 characters');
+      handleFormError('Message must be less than 500 characters');
       return false;
     }
     const regex = /^[a-zA-Z0-9\s.,!?'"()-]+$/g;
@@ -55,14 +62,14 @@ const ContactForm = () => {
     if (regex.test(input)) {
       return true;
     } else {
-      setError('Invalid Message Text, only ');
+      handleFormError('Invalid Message: no fancy characters');
       return false; // Input contains invalid characters
     }
   }
 
   const validateEmail = (input: string) => {
     if (input.trim() === '') {
-      setError('A valid email is required');
+      handleFormError('A valid email is required');
       return false;
     }
     const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -70,7 +77,7 @@ const ContactForm = () => {
     if (regex.test(input)) {
       return true;
     } else {
-      setError('Invalid Email address');
+      handleFormError('Invalid Email address');
       return false;
     }
   };
@@ -108,7 +115,7 @@ const ContactForm = () => {
       try {
         await handleMessageSubmit(messageInput.value);
       } catch(e) {
-        setError('Message Error');
+        handleFormError('Message Submission Error');
       }
     }
   };

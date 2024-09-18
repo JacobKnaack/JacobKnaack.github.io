@@ -16,7 +16,7 @@ export default function Contact() {
 
   return (
     <section id="Contact">
-      <h2 className="display primary dark">Contact Me</h2>
+      <h2 className="display primary dark heading">Contact Me</h2>
       <div className="page-description">
         {content.contact_description.map((text, idx) => <p className="text primary dark" key={idx}>{text}</p>)}
       </div>

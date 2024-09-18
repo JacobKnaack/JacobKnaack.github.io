@@ -6,7 +6,12 @@
   align-items: center;
 }
 
+#Contact .page-description {
+  width: 80%;
+}
+
 .contact-info-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -37,7 +42,8 @@
 }
 
 .contact-form {
-  width: 400px;
+  width: 50%;
+  margin: 0 auto;
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 8px;
@@ -123,5 +129,11 @@ button[type="button"]:hover {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-form {
+    width: 80%;
   }
 }
