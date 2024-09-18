@@ -29,3 +29,99 @@
   transform: scale(1.2);
 }
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form {
+  width: 400px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#email-answer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#email-answer h4, #email-answer p {
+  color: black;
+}
+fieldset {
+  border: none;
+}
+legend {
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: "Playfair Display",
+    serif;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color:  black;
+  font-family: "Montserrat",
+    sans-serif;
+}
+input[type='email'],
+textarea {
+  color: black;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+textarea {
+  resize: vertical;
+  /* Allow vertical resizing of textarea */
+}
+
+button[type="submit"] {
+  background-color: #EE6C4D;
+}
+button:hover {
+  background-color: #4f4f4f;
+  color: white;
+}
+button[type="button"] {
+  background-color: #f5f5f5;
+  color: black;
+  margin-right: 10px;
+}
+button[type="button"]:hover {
+  background-color: #e0e0e0;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

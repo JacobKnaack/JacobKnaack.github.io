@@ -1,20 +1,16 @@
+import './contact.css';
 import { useContext } from 'react';
 import { ContentContext } from '../../context/content/ContentContext';
 import GhIcon from '../../assets/github.svg';
 import LiIcon from '../../assets/linkedin.svg';
-import './contact.css'
+import ContactForm from './ContactForm';
 
 export default function Contact() {
-
   const content = useContext(ContentContext);
 
-  function formatPhoneNumber(phoneNumber: string): string {
-    // Remove all non-digit characters
+  const formatPhoneNumber = (phoneNumber: string): string => {
     const cleaned = ('' + phoneNumber).replace(/\D/g, '');
-
-    // Format the phone number with country code, parentheses, and dashes
     const formattedNumber = `+1(${cleaned.substring(0, 3)})-${cleaned.substring(3, 6)}-${cleaned.substring(6, 10)}`;
-
     return formattedNumber;
   }
 
@@ -25,6 +21,7 @@ export default function Contact() {
         {content.contact_description.map((text, idx) => <p className="text primary dark" key={idx}>{text}</p>)}
       </div>
       <div className="contact-info-container">
+        <ContactForm />
         <div>
           <p className="text primary dark">Location: {content.contact_info.location}</p>
           <p className="text primary dark">Phone: {formatPhoneNumber(content.contact_info.phone)}</p>

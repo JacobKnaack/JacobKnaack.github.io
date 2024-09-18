@@ -3,7 +3,7 @@
   "welcome_message": "You made it!",
   "introduction": "My name is Jacob.",
   "profile_statement": "I am a Software Engineer, Educator, and Curriculum Developer.  How can I help you today?",
-  "about_description": ["I build web services and teach software development in the Seattle Area.", "I enjoy working with clients to create products that are exciting, and unique, while efficiently solving real world problems.", "I have a diverse background in Psychology, Research, Education, Software and Computer Science."],
+  "about_description": ["I build web services and teach software development in the Seattle Area.", "I enjoy working with clients and stakeholders to create products that are exciting, and unique, while keeping real world objectives in focus.", "I have a diverse background in Psychology, Research, Education, Software and Computer Science."],
   "service_description": ["Here's what I can do for you."],
   "services": [{
       "name": "Web Services",
@@ -25,7 +25,7 @@
       },
       "title": "Lead Instructor / Curriculum Developer",
       "company": "Code Fellows",
-      "description": "Taught Web Development and Software Engineering to job seekers.  Created and maintained licensed curriculum from basic to advanced engineering skills."
+      "description": "Teaching Web Development and Software Engineering to job seekers.  Created and maintained licensed curriculum from basic to advanced engineering skills."
     },
     {
       "dates": {
