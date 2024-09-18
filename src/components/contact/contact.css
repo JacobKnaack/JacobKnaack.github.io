@@ -127,11 +127,13 @@ button[type="button"]:hover {
   background-color: #e0e0e0;
 }
 
-#form-submitted h2 {
+.form-submitted h2 {
   font-family: "Playfair Display", serif;
+  color: black;
 }
-#form-submitted p {
+.form-submitted p {
   font-family: "Montserrat", sans-serif;
+  color: black;
 }
 
 .loading-spinner {
