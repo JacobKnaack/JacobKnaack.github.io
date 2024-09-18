@@ -25,17 +25,17 @@
       "forks": null
     },
     {
-      "name": "cosmic-messenger",
-      "description": "Chat Application with SMS configuration.",
-      "language": "JavaScript",
+      "name": "Engineers-of-Amazing-Talent/Simple-Variable-Service",
+      "description": "Variable storage of dynamic graph values represented as JSON.",
+      "language": "TypeScript",
       "visibility": "public",
       "stars": null,
       "forks": null
     },
     {
-      "name": "sick-flicks-app",
-      "description": "Web Service for Sick Flicks Application Features",
-      "language": "TypeScript",
+      "name": "cosmic-messenger",
+      "description": "Chat Application with SMS configuration.",
+      "language": "JavaScript",
       "visibility": "public",
       "stars": null,
       "forks": null

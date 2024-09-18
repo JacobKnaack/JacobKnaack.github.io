@@ -6,24 +6,12 @@ import LiIcon from '../../assets/linkedin.svg';
 import ContactForm from './ContactForm';
 
 export default function Contact() {
-
   const content = useContext(ContentContext);
 
   const formatPhoneNumber = (phoneNumber: string): string => {
-    // Remove all non-digit characters
     const cleaned = ('' + phoneNumber).replace(/\D/g, '');
-
-    // Format the phone number with country code, parentheses, and dashes
     const formattedNumber = `+1(${cleaned.substring(0, 3)})-${cleaned.substring(3, 6)}-${cleaned.substring(6, 10)}`;
-
     return formattedNumber;
-  }  
-
-  const onSubmit = (email: string, text: string) => {
-    console.log(email, text);
-  }
-  const onError = (error: {error: string}) => {
-    console.log('ERROR OCCURRED', error);
   }
 
   return (
@@ -33,6 +21,7 @@ export default function Contact() {
         {content.contact_description.map((text, idx) => <p className="text primary dark" key={idx}>{text}</p>)}
       </div>
       <div className="contact-info-container">
+        <ContactForm />
         <div>
           <p className="text primary dark">Location: {content.contact_info.location}</p>
           <p className="text primary dark">Phone: {formatPhoneNumber(content.contact_info.phone)}</p>
@@ -46,7 +35,6 @@ export default function Contact() {
             <img src={LiIcon}/>
           </a>
         </div>
-        <ContactForm onSubmit={onSubmit} canSubmit={true} onError={onError} />
       </div>
     </section>
   )
