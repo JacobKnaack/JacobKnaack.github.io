@@ -39,24 +39,32 @@ export default function MessagesProvider({ children }: React.PropsWithChildren) 
 
   const handleMessageSubmit = useCallback(async (message: string): Promise<void> => {
     if (profile) {
-      setAwaitingResponse(true);
-      const response = await sendMessage({ email: profile.email, text: message });
-      if (response.status === 200) {
-        dispatch({ type: 'SUBMIT', payload: { timestamp: response.timestamp }});
-        saveUser({...profile, hasSubmitted: true, submittedAt: response.timestamp});
+      try {
+        setAwaitingResponse(true);
+        const response = await sendMessage({ email: profile.email, text: message });
+        if (response.status === 200) {
+          dispatch({ type: 'SUBMIT', payload: { timestamp: response.timestamp }});
+        }
+      } catch(e) {
+        dispatch({ type: 'RESET_SUBMIT' });
+        throw new Error('Message Provider send message error');
+      } finally {
+        setAwaitingResponse(false);
       }
     } else {
-      dispatch({ type: 'RESET_SUBMIT' });
+      throw new Error('Unable to send Message, no profile loaded');
     }
-    setAwaitingResponse(false);
   }, [profile, dispatch, setAwaitingResponse]);
+
+  useEffect(() => {
+    saveUser(profile);
+  }, [profile]);
 
   useEffect(() => {
     if (userProfile) {
       handleRegister(userProfile.email);
       if (validateTimeStamp(userProfile.submittedAt) && profile.hasSubmitted === true) {
         dispatch({ type: 'RESET_SUBMIT' });
-        saveUser({ ...userProfile, hasSubmitted: false, submittedAt: null });
       }
     }
   }, []);

@@ -3,7 +3,7 @@ import { MessageContext } from '../../context/messages/MessagesContext';
 
 const FormSubmitted = () => {
   return (
-    <div id="form-submitted">
+    <div className="form-submitted">
       <h2>Thanks for reaching out!</h2>
       <p>I'll get back to you shortly.</p>
     </div>
@@ -17,6 +17,16 @@ const Loading = () => {
     </div>
   );
 };
+
+const Error = ({ message }: { message: string }) => {
+  return (
+    <div className="error-notification">
+      <div className="message-container">
+        <p className="message">{message}</p>
+      </div>
+    </div>
+  )
+}
 
 const ContactForm = () => {
   const {
@@ -115,7 +125,8 @@ const ContactForm = () => {
       try {
         await handleMessageSubmit(messageInput.value);
       } catch(e) {
-        handleFormError('Message Submission Error');
+        console.error('error submitting contact form:', e);
+        handleFormError(`Message Submission Error: Please try again later`);
       }
     }
   };
@@ -132,7 +143,7 @@ const ContactForm = () => {
           {step > 1 && (
             <div id="email-answer">
               <h4>Email</h4>
-              <p>{answers.email}</p>
+              <p className="email-text" onClick={handleBack}>{answers.email}</p>
             </div>
           )}
   
@@ -149,7 +160,6 @@ const ContactForm = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 required
               />
-              {error && <p style={{ color: 'red' }}>{error}</p>}
             </div>
           )}
   
@@ -164,7 +174,11 @@ const ContactForm = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 required
               />
-              {error && <p style={{ color: 'red' }}>{error}</p>}
+            </div>
+          )}
+          {error !== '' && (
+            <div>
+              <Error message={error} />
             </div>
           )}
 
