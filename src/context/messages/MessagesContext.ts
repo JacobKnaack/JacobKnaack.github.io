@@ -50,7 +50,7 @@ export const validateTimeStamp = (timeValue: number | null | undefined): boolean
   if (!timeValue) {
     return true;
   }
-  const waitPeriod: number = 7 * 24 * 60 * 60 * 1000;
+  const waitPeriod: number = 24 * 60 * 60 * 1000;
   const currentTime = generateTimeStamp();
 
   return Boolean(currentTime - timeValue >= waitPeriod);
