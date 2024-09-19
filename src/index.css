@@ -14,7 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   --background-color-light: #FFFFFF;
-  --primary-text-color-light: #000000;
+  --primary-text-color-light: #333333;
   --secondary-text-color-light: #555555;
   --accent-color-light: #007BFF;
   --border-color-light: #E0E0E0;
@@ -90,9 +90,10 @@ button {
   transition: border-color 0.25s;
   background-color: rgba(255, 255, 255, 0);
 }
-button:hover {
+button.light:hover {
   border-color: #646cff;
-  background-color: darkslategray;
+  color: var(--secondary-text-color-dark);
+  background-color: var(--background-color-dark);
 }
 
 @media (prefers-color-scheme: light) {
