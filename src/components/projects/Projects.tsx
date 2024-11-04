@@ -11,6 +11,7 @@ interface ProjectDetailsProps {
 
 type Project = {
   name: string;
+  url: string;
   description: string;
   language: string;
   visibility: string;
@@ -27,15 +28,9 @@ const ProjectDetail = ({ label, text }: ProjectDetailsProps) => {
 }
 
 export const ProjectItem = ({ project }: ProjectItemProps) => {
-  const formatLink = (repoName: string): string => {
-    if (repoName.includes('/')) {
-      return repoName;
-    }
-    return 'JacobKnaack/' + repoName;
-  }
   return (
     <li className='project-card'>
-      <a href={`https://github.com/${formatLink(project.name)}`} target="_blank">
+      <a href={project.url} target="_blank">
         <div className="project-header">
           <h3 className="display project-name">{project.name}</h3>
           <img src={GhIcon} />

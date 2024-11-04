@@ -4,6 +4,7 @@ const GITHUB_API_URL = '/github.json';
 
 export type Project = {
   name: string;
+  url: string;
   description: string;
   language: string;
   visibility: string;
