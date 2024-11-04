@@ -1,15 +1,26 @@
 {
   "repositories": [
     {
-      "name": "Pucksports-Mobile",
-      "description": "Mobile Client for the Pucksports platform: https://pucksports.com",
+      "name": "PuckSports Mobile",
+      "url": "https://www.pucksports.com",
+      "description": "Mobile Client for the PuckSports platform.  Deployed on the Google Play Store and Apple App Store.",
       "language": "JavaScript",
       "visibility": "private",
       "stars": null,
       "forks": null
     },
     {
-      "name": "gatsbyjs/gatsby",
+      "name": "LiveStream Notification Server",
+      "url": "https://pucksports-stream.live",
+      "description": "Server to manage live streamed audio and video to web clients.  Publishes notifications for clients subscribed to live stream events.",
+      "language": "JavaScript",
+      "visibility": "private",
+      "stars": null,
+      "forks": null
+    },
+    {
+      "name": "Gatsby JS",
+      "url": "https://github.com/gatsbyjs/gatsby",
       "description": "The best React-based framework with performance, scalability and security built in.",
       "language": "JavaScript",
       "visibility": "public",
@@ -17,7 +28,8 @@
       "forks": "10.3k"
     },
     {
-      "name": "gatsby-docs",
+      "name": "Gatsby Docs",
+      "url": "https://github.com/JacobKnaack/gatsby-docs",
       "description": "Creating and Viewing Documentation Using Gatsby and CosmicJs",
       "language": "CSS",
       "visibility": "public",
@@ -25,7 +37,8 @@
       "forks": null
     },
     {
-      "name": "Engineers-of-Amazing-Talent/Simple-Variable-Service",
+      "name": "Simple Variable Service",
+      "url": "https://github.com/Engineers-of-Amazing-Talent/Simple-Variable-Service",
       "description": "Variable storage of dynamic graph values represented as JSON.",
       "language": "TypeScript",
       "visibility": "public",
@@ -33,7 +46,8 @@
       "forks": null
     },
     {
-      "name": "cosmic-messenger",
+      "name": "Cosmic Messenger",
+      "url": "https://github.com/JacobKnaack/cosmic-messenger",
       "description": "Chat Application with SMS configuration.",
       "language": "JavaScript",
       "visibility": "public",
@@ -41,7 +55,8 @@
       "forks": null
     },
     {
-      "name": "Glass-Components",
+      "name": "Glass Components",
+      "url": "https://github.com/JacobKnaack/Glass-Components",
       "description": "Minimalistic Glass UI Components",
       "language": "TypeScript",
       "visibility": "public",
@@ -49,7 +64,8 @@
       "forks": null
     },
     {
-      "name": "Web-Components",
+      "name": "Web Components",
+      "url": "https://github.com/JacobKnaack/Web-Components",
       "description": "Isomorphic Web Components",
       "language": "JavaScript",
       "visibility": "public",
