@@ -20,6 +20,15 @@
   "experiences": [
     {
       "dates": {
+        "start": "2024",
+        "end": "current"
+      },
+      "title": "Frontend Developer",
+      "company": "Hostwinds",
+      "description": "Building frontend solutions with industry standard frameworks and tools to support Hostwinds web services and customers."
+    },
+    {
+      "dates": {
         "start": "2019",
         "end": "2024"
       },
