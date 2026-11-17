@@ -8,6 +8,8 @@
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 .display {
   font-family: "Playfair Display", serif;
@@ -45,7 +47,7 @@ main section {
 }
 
 .section-header {
-  width: 500px;
+  max-width: 500px;
   text-align: center;
   margin: 0 auto 100px auto;
 }
